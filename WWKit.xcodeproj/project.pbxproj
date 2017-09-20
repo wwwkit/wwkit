@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		404EC3B10B13C77F3618E13D /* libPods-WWKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC785A253D04B6B2B6165EA /* libPods-WWKitTests.a */; };
+		A5128370C1294011A4ACCA99 /* libPods-WWKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A17F47A5E12566595EE2B /* libPods-WWKit.a */; };
 		DE00C15B1F7220C500F8F4E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00C15A1F7220C500F8F4E5 /* AppDelegate.m */; };
 		DE00C15E1F7220C500F8F4E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00C15D1F7220C500F8F4E5 /* ViewController.m */; };
 		DE00C1631F7220C500F8F4E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE00C1621F7220C500F8F4E5 /* Assets.xcassets */; };
@@ -14,6 +16,7 @@
 		DE00C1731F7220C500F8F4E5 /* WWKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00C1721F7220C500F8F4E5 /* WWKitTests.m */; };
 		DE00C17E1F7220C600F8F4E5 /* WWKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00C17D1F7220C600F8F4E5 /* WWKitUITests.m */; };
 		DE3911A21F72369400D74266 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3911A11F72369400D74266 /* Default-568h@2x.png */; };
+		E9AF129E1558C6CB3052524F /* libPods-WWKitUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 919620513629421A39658B0B /* libPods-WWKitUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4BC785A253D04B6B2B6165EA /* libPods-WWKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WWKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A450381ABFAFE1ACB83ED1E /* Pods-WWKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WWKitTests/Pods-WWKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		919620513629421A39658B0B /* libPods-WWKitUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WWKitUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B9DBCFA2027BB4B94429E3C /* Pods-WWKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WWKitTests/Pods-WWKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD09159EE5F524BF2A322651 /* Pods-WWKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WWKit/Pods-WWKit.debug.xcconfig"; sourceTree = "<group>"; };
+		AFBF9794EF91CFD9373FE183 /* Pods-WWKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWKitUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WWKitUITests/Pods-WWKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CE7A17F47A5E12566595EE2B /* libPods-WWKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WWKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0CB9F1AD5CFF22CC7AE9649 /* Pods-WWKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WWKitUITests/Pods-WWKitUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DE00C1561F7220C500F8F4E5 /* WWKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE00C1591F7220C500F8F4E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DE00C15A1F7220C500F8F4E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -49,6 +60,7 @@
 		DE00C17D1F7220C600F8F4E5 /* WWKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWKitUITests.m; sourceTree = "<group>"; };
 		DE00C17F1F7220C600F8F4E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE3911A11F72369400D74266 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F19AF68FF10BA6C4CADEF2BC /* Pods-WWKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-WWKit/Pods-WWKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5128370C1294011A4ACCA99 /* libPods-WWKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				404EC3B10B13C77F3618E13D /* libPods-WWKitTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9AF129E1558C6CB3052524F /* libPods-WWKitUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C54A0E6A36A7CBF71C5A332 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE7A17F47A5E12566595EE2B /* libPods-WWKit.a */,
+				4BC785A253D04B6B2B6165EA /* libPods-WWKitTests.a */,
+				919620513629421A39658B0B /* libPods-WWKitUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BEAB551AF34871BAF098FD3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD09159EE5F524BF2A322651 /* Pods-WWKit.debug.xcconfig */,
+				F19AF68FF10BA6C4CADEF2BC /* Pods-WWKit.release.xcconfig */,
+				9B9DBCFA2027BB4B94429E3C /* Pods-WWKitTests.debug.xcconfig */,
+				6A450381ABFAFE1ACB83ED1E /* Pods-WWKitTests.release.xcconfig */,
+				AFBF9794EF91CFD9373FE183 /* Pods-WWKitUITests.debug.xcconfig */,
+				D0CB9F1AD5CFF22CC7AE9649 /* Pods-WWKitUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DE00C14D1F7220C500F8F4E5 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +122,8 @@
 				DE00C1711F7220C500F8F4E5 /* WWKitTests */,
 				DE00C17C1F7220C600F8F4E5 /* WWKitUITests */,
 				DE00C1571F7220C500F8F4E5 /* Products */,
+				9BEAB551AF34871BAF098FD3 /* Pods */,
+				6C54A0E6A36A7CBF71C5A332 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE00C1821F7220C600F8F4E5 /* Build configuration list for PBXNativeTarget "WWKit" */;
 			buildPhases = (
+				068C203EF15F52EF18369B9A /* [CP] Check Pods Manifest.lock */,
 				DE00C1521F7220C500F8F4E5 /* Sources */,
 				DE00C1531F7220C500F8F4E5 /* Frameworks */,
 				DE00C1541F7220C500F8F4E5 /* Resources */,
+				4B81D9B1594C9CE586E0C7D9 /* [CP] Embed Pods Frameworks */,
+				9F44BC0335C39E8C98F72FAB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -153,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE00C1851F7220C600F8F4E5 /* Build configuration list for PBXNativeTarget "WWKitTests" */;
 			buildPhases = (
+				7A5BCEB300300EF6FB610F1B /* [CP] Check Pods Manifest.lock */,
 				DE00C16A1F7220C500F8F4E5 /* Sources */,
 				DE00C16B1F7220C500F8F4E5 /* Frameworks */,
 				DE00C16C1F7220C500F8F4E5 /* Resources */,
+				5176F2504586BE0287FB5D5C /* [CP] Embed Pods Frameworks */,
+				1C2248B29F62AD87042F3D08 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,9 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE00C1881F7220C600F8F4E5 /* Build configuration list for PBXNativeTarget "WWKitUITests" */;
 			buildPhases = (
+				F318D402B4BB7DBFA0D4CA6C /* [CP] Check Pods Manifest.lock */,
 				DE00C1751F7220C600F8F4E5 /* Sources */,
 				DE00C1761F7220C600F8F4E5 /* Frameworks */,
 				DE00C1771F7220C600F8F4E5 /* Resources */,
+				3FC364D459E2D0BD373CF55D /* [CP] Embed Pods Frameworks */,
+				E8687860CD0DB2A835BF0AB3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,6 +304,153 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		068C203EF15F52EF18369B9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WWKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C2248B29F62AD87042F3D08 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WWKitTests/Pods-WWKitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FC364D459E2D0BD373CF55D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WWKitUITests/Pods-WWKitUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B81D9B1594C9CE586E0C7D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WWKit/Pods-WWKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5176F2504586BE0287FB5D5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WWKitTests/Pods-WWKitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A5BCEB300300EF6FB610F1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WWKitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F44BC0335C39E8C98F72FAB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WWKit/Pods-WWKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8687860CD0DB2A835BF0AB3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WWKitUITests/Pods-WWKitUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F318D402B4BB7DBFA0D4CA6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WWKitUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DE00C1521F7220C500F8F4E5 /* Sources */ = {
@@ -405,6 +601,7 @@
 		};
 		DE00C1831F7220C600F8F4E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD09159EE5F524BF2A322651 /* Pods-WWKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -420,6 +617,7 @@
 		};
 		DE00C1841F7220C600F8F4E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F19AF68FF10BA6C4CADEF2BC /* Pods-WWKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -435,6 +633,7 @@
 		};
 		DE00C1861F7220C600F8F4E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B9DBCFA2027BB4B94429E3C /* Pods-WWKitTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +648,7 @@
 		};
 		DE00C1871F7220C600F8F4E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A450381ABFAFE1ACB83ED1E /* Pods-WWKitTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -463,6 +663,7 @@
 		};
 		DE00C1891F7220C600F8F4E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFBF9794EF91CFD9373FE183 /* Pods-WWKitUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WWKitUITests/Info.plist;
@@ -476,6 +677,7 @@
 		};
 		DE00C18A1F7220C600F8F4E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0CB9F1AD5CFF22CC7AE9649 /* Pods-WWKitUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WWKitUITests/Info.plist;
