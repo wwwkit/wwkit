@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04B8C48F1F736D3700FD9EE0 /* WWBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C48E1F736D3700FD9EE0 /* WWBaseNavigationViewController.m */; };
+		04B8C4961F736E6900FD9EE0 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C4951F736E6900FD9EE0 /* UIBarButtonItem+Extension.m */; };
+		04B8C4991F73922E00FD9EE0 /* UIColor+Hexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C4981F73922E00FD9EE0 /* UIColor+Hexadecimal.m */; };
 		404EC3B10B13C77F3618E13D /* libPods-WWKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC785A253D04B6B2B6165EA /* libPods-WWKitTests.a */; };
 		A5128370C1294011A4ACCA99 /* libPods-WWKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A17F47A5E12566595EE2B /* libPods-WWKit.a */; };
 		DE00C1631F7220C500F8F4E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE00C1621F7220C500F8F4E5 /* Assets.xcassets */; };
@@ -37,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04B8C48D1F736D3700FD9EE0 /* WWBaseNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWBaseNavigationViewController.h; sourceTree = "<group>"; };
+		04B8C48E1F736D3700FD9EE0 /* WWBaseNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWBaseNavigationViewController.m; sourceTree = "<group>"; };
+		04B8C4941F736E6900FD9EE0 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		04B8C4951F736E6900FD9EE0 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		04B8C4971F73922E00FD9EE0 /* UIColor+Hexadecimal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hexadecimal.h"; sourceTree = "<group>"; };
+		04B8C4981F73922E00FD9EE0 /* UIColor+Hexadecimal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hexadecimal.m"; sourceTree = "<group>"; };
 		4BC785A253D04B6B2B6165EA /* libPods-WWKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WWKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A450381ABFAFE1ACB83ED1E /* Pods-WWKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WWKitTests/Pods-WWKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		919620513629421A39658B0B /* libPods-WWKitUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WWKitUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,6 +241,8 @@
 		DEAAAA9A1F735BD400A461F6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				04B8C48D1F736D3700FD9EE0 /* WWBaseNavigationViewController.h */,
+				04B8C48E1F736D3700FD9EE0 /* WWBaseNavigationViewController.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -239,6 +250,10 @@
 		DEAAAA9B1F735BD400A461F6 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				04B8C4941F736E6900FD9EE0 /* UIBarButtonItem+Extension.h */,
+				04B8C4951F736E6900FD9EE0 /* UIBarButtonItem+Extension.m */,
+				04B8C4971F73922E00FD9EE0 /* UIColor+Hexadecimal.h */,
+				04B8C4981F73922E00FD9EE0 /* UIColor+Hexadecimal.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -562,8 +577,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEAAAAA61F735EC500A461F6 /* main.m in Sources */,
+				04B8C4991F73922E00FD9EE0 /* UIColor+Hexadecimal.m in Sources */,
 				DEAAAAA31F735E9F00A461F6 /* AppDelegate.m in Sources */,
+				04B8C48F1F736D3700FD9EE0 /* WWBaseNavigationViewController.m in Sources */,
 				DEAAAAA51F735E9F00A461F6 /* WWHomeViewController.m in Sources */,
+				04B8C4961F736E6900FD9EE0 /* UIBarButtonItem+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
