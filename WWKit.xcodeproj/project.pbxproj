@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		404EC3B10B13C77F3618E13D /* libPods-WWKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC785A253D04B6B2B6165EA /* libPods-WWKitTests.a */; };
 		A5128370C1294011A4ACCA99 /* libPods-WWKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A17F47A5E12566595EE2B /* libPods-WWKit.a */; };
-		DE00C15B1F7220C500F8F4E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00C15A1F7220C500F8F4E5 /* AppDelegate.m */; };
-		DE00C15E1F7220C500F8F4E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00C15D1F7220C500F8F4E5 /* ViewController.m */; };
 		DE00C1631F7220C500F8F4E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE00C1621F7220C500F8F4E5 /* Assets.xcassets */; };
-		DE00C1691F7220C500F8F4E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00C1681F7220C500F8F4E5 /* main.m */; };
 		DE00C1731F7220C500F8F4E5 /* WWKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00C1721F7220C500F8F4E5 /* WWKitTests.m */; };
 		DE00C17E1F7220C600F8F4E5 /* WWKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00C17D1F7220C600F8F4E5 /* WWKitUITests.m */; };
 		DE3911A21F72369400D74266 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3911A11F72369400D74266 /* Default-568h@2x.png */; };
+		DEAAAAA31F735E9F00A461F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAAAA931F735B0C00A461F6 /* AppDelegate.m */; };
+		DEAAAAA51F735E9F00A461F6 /* WWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAAAA9F1F735C6100A461F6 /* WWHomeViewController.m */; };
+		DEAAAAA61F735EC500A461F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00C1681F7220C500F8F4E5 /* main.m */; };
 		E9AF129E1558C6CB3052524F /* libPods-WWKitUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 919620513629421A39658B0B /* libPods-WWKitUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -46,10 +46,6 @@
 		CE7A17F47A5E12566595EE2B /* libPods-WWKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WWKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0CB9F1AD5CFF22CC7AE9649 /* Pods-WWKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WWKitUITests/Pods-WWKitUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DE00C1561F7220C500F8F4E5 /* WWKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE00C1591F7220C500F8F4E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DE00C15A1F7220C500F8F4E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DE00C15C1F7220C500F8F4E5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DE00C15D1F7220C500F8F4E5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DE00C1621F7220C500F8F4E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE00C1671F7220C500F8F4E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE00C1681F7220C500F8F4E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +56,10 @@
 		DE00C17D1F7220C600F8F4E5 /* WWKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWKitUITests.m; sourceTree = "<group>"; };
 		DE00C17F1F7220C600F8F4E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE3911A11F72369400D74266 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DEAAAA921F735B0C00A461F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DEAAAA931F735B0C00A461F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DEAAAA9E1F735C6100A461F6 /* WWHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWHomeViewController.h; sourceTree = "<group>"; };
+		DEAAAA9F1F735C6100A461F6 /* WWHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWHomeViewController.m; sourceTree = "<group>"; };
 		F19AF68FF10BA6C4CADEF2BC /* Pods-WWKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-WWKit/Pods-WWKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,10 +140,12 @@
 		DE00C1581F7220C500F8F4E5 /* WWKit */ = {
 			isa = PBXGroup;
 			children = (
-				DE00C1591F7220C500F8F4E5 /* AppDelegate.h */,
-				DE00C15A1F7220C500F8F4E5 /* AppDelegate.m */,
-				DE00C15C1F7220C500F8F4E5 /* ViewController.h */,
-				DE00C15D1F7220C500F8F4E5 /* ViewController.m */,
+				DEAAAA911F735B0C00A461F6 /* AppDelegate */,
+				DEAAAA951F735B2100A461F6 /* General */,
+				DEAAAA941F735B2100A461F6 /* Helpers */,
+				DEAAAA981F735B2100A461F6 /* Macro */,
+				DEAAAA961F735B2100A461F6 /* Main */,
+				DEAAAA991F735B2100A461F6 /* Resources */,
 				DE00C1621F7220C500F8F4E5 /* Assets.xcassets */,
 				DE00C1671F7220C500F8F4E5 /* Info.plist */,
 				DE00C1681F7220C500F8F4E5 /* main.m */,
@@ -167,6 +169,108 @@
 				DE00C17F1F7220C600F8F4E5 /* Info.plist */,
 			);
 			path = WWKitUITests;
+			sourceTree = "<group>";
+		};
+		DEAAAA911F735B0C00A461F6 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DEAAAA921F735B0C00A461F6 /* AppDelegate.h */,
+				DEAAAA931F735B0C00A461F6 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		DEAAAA941F735B2100A461F6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DEAAAA951F735B2100A461F6 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				DEAAAA9B1F735BD400A461F6 /* Categories */,
+				DEAAAA9A1F735BD400A461F6 /* Common */,
+				DEAAAA9C1F735BD400A461F6 /* Views */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		DEAAAA961F735B2100A461F6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DEAAAA971F735B2100A461F6 /* Home */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DEAAAA971F735B2100A461F6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DEAAAA9D1F735C6100A461F6 /* Controller */,
+				DEAAAAA11F735C6100A461F6 /* Model */,
+				DEAAAAA01F735C6100A461F6 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DEAAAA981F735B2100A461F6 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		DEAAAA991F735B2100A461F6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DEAAAA9A1F735BD400A461F6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DEAAAA9B1F735BD400A461F6 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		DEAAAA9C1F735BD400A461F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DEAAAA9D1F735C6100A461F6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DEAAAA9E1F735C6100A461F6 /* WWHomeViewController.h */,
+				DEAAAA9F1F735C6100A461F6 /* WWHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DEAAAAA01F735C6100A461F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEAAAAA11F735C6100A461F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,9 +561,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE00C15E1F7220C500F8F4E5 /* ViewController.m in Sources */,
-				DE00C1691F7220C500F8F4E5 /* main.m in Sources */,
-				DE00C15B1F7220C500F8F4E5 /* AppDelegate.m in Sources */,
+				DEAAAAA61F735EC500A461F6 /* main.m in Sources */,
+				DEAAAAA31F735E9F00A461F6 /* AppDelegate.m in Sources */,
+				DEAAAAA51F735E9F00A461F6 /* WWHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +716,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wwkit.WWKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -628,6 +733,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wwkit.WWKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
