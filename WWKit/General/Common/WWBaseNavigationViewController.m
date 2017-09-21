@@ -7,7 +7,6 @@
 //
 
 #import "WWBaseNavigationViewController.h"
-#import "UIColor+Hexadecimal.h"
 
 @interface WWBaseNavigationViewController ()
 
@@ -43,17 +42,13 @@
 {
     [UIView animateWithDuration:0.25 animations:^{
         if (push) {
-            CGRect frame = self.alphaView.frame;
-            frame.origin = CGPointMake(0-frame.size.width, frame.origin.y);
-            self.alphaView.frame = frame;
+            self.alphaView.right = 0;
         } else {
             //            self.alphaView.left = ScreenWith;
         }
     } completion:^(BOOL finished) {
         if (push) {
-            CGRect frame = self.alphaView.frame;
-            frame.origin = CGPointMake(0, frame.origin.y);
-            self.alphaView.frame = frame;
+            self.alphaView.left = 0;
             //            self.alphaView.backgroundColor = [UIColor redColor];
             //            self.alphaView.alpha = 1;
         } else{
