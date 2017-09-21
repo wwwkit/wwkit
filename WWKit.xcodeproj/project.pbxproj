@@ -60,6 +60,7 @@
 		DEAAAA931F735B0C00A461F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DEAAAA9E1F735C6100A461F6 /* WWHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWHomeViewController.h; sourceTree = "<group>"; };
 		DEAAAA9F1F735C6100A461F6 /* WWHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWHomeViewController.m; sourceTree = "<group>"; };
+		DEAAAAA81F7390A200A461F6 /* WWKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WWKit-Prefix.pch"; sourceTree = "<group>"; };
 		F19AF68FF10BA6C4CADEF2BC /* Pods-WWKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-WWKit/Pods-WWKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,9 +147,7 @@
 				DEAAAA981F735B2100A461F6 /* Macro */,
 				DEAAAA961F735B2100A461F6 /* Main */,
 				DEAAAA991F735B2100A461F6 /* Resources */,
-				DE00C1621F7220C500F8F4E5 /* Assets.xcassets */,
-				DE00C1671F7220C500F8F4E5 /* Info.plist */,
-				DE00C1681F7220C500F8F4E5 /* main.m */,
+				DEAAAAA71F73903D00A461F6 /* Supporting Files */,
 			);
 			path = WWKit;
 			sourceTree = "<group>";
@@ -271,6 +270,17 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DEAAAAA71F73903D00A461F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE00C1621F7220C500F8F4E5 /* Assets.xcassets */,
+				DE00C1671F7220C500F8F4E5 /* Info.plist */,
+				DE00C1681F7220C500F8F4E5 /* main.m */,
+				DEAAAAA81F7390A200A461F6 /* WWKit-Prefix.pch */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -710,7 +720,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79UV3HJ93T;
-				INFOPLIST_FILE = WWKit/Info.plist;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = "WWKit/Supporting Files/WWKit-Prefix.pch";
+				INFOPLIST_FILE = "WWKit/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wwkit.WWKit;
@@ -727,7 +739,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79UV3HJ93T;
-				INFOPLIST_FILE = WWKit/Info.plist;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = "WWKit/Supporting Files/WWKit-Prefix.pch";
+				INFOPLIST_FILE = "WWKit/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wwkit.WWKit;
