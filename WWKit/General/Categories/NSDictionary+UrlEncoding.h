@@ -10,4 +10,7 @@
 
 @interface NSDictionary (UrlEncoding)
 
+// convert NSDictionary to url string
+-(NSString*) urlEncodedString;
+
 @end

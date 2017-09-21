@@ -10,4 +10,15 @@
 
 @implementation NSURL (Additions)
 
+- (NSURL *)URLByAppendingQueryString:(NSString *)queryString {
+    if (![queryString length]) {
+        return self;
+    }
+    
+    NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@%@", [self absoluteString],
+                           [self query] ? @"&" : @"?", queryString];
+    NSURL *theURL = [NSURL URLWithString:urlString];
+    return theURL;
+}
+
 @end

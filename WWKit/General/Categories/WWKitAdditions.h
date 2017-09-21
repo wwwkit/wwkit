@@ -8,5 +8,6 @@
 
 #import "UIBarButtonItem+Extension.h"
 #import "UIColor+Hexadecimal.h"
+#import "NSString+Additions.h"
 #import "UIView+Ext.h"
 

@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSURL (Additions)
+// append query string to url
+- (NSURL *)URLByAppendingQueryString:(NSString *)queryString;
 
 @end
