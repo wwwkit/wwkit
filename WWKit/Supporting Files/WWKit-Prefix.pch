@@ -9,8 +9,16 @@
 #ifndef WWKit_Prefix_pch
 #define WWKit_Prefix_pch
 
+//全局宏
 #import "WWKitAdditions.h"
 #import "WWUtilsMacro.h"
 #import "FontAndColorMacro.h"
+#import "MBProgressHUD+WW.h"
+#import "CommonMacros.h"
+
+//基础类
+#import "AppDelegate.h"
+#import "AppDelegate+AppService.h"
+
 
 #endif /* WWKit_Prefix_pch */
