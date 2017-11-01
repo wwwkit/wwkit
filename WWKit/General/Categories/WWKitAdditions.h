@@ -10,4 +10,4 @@
 #import "UIColor+Hexadecimal.h"
 #import "NSString+Additions.h"
 #import "UIView+Ext.h"
-
+#import "UIImage+WWAdd.h"
