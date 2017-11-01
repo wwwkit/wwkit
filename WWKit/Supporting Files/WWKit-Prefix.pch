@@ -6,21 +6,11 @@
 //  Copyright © 2017年 wwkit. All rights reserved.
 //
 
-#ifdef DEBUG
-#define DLog( s, ... ) NSLog( @"<%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
-#else
-#define DLog( s, ... )
-#endif
-#ifdef DEBUG
-
-#else
-#define NSLog(...)
-#endif
-
 #ifndef WWKit_Prefix_pch
 #define WWKit_Prefix_pch
 
 #import "WWKitAdditions.h"
 #import "WWUtilsMacro.h"
+#import "FontAndColorMacro.h"
 
 #endif /* WWKit_Prefix_pch */

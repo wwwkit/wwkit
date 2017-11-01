@@ -8,7 +8,7 @@
 
 #import "WWBaseNavigationViewController.h"
 
-@interface WWBaseNavigationViewController ()
+@interface WWBaseNavigationViewController ()<UINavigationControllerDelegate>
 
 @property (nonatomic, strong) id popDelegate;
 @property (nonatomic, strong) UIView *alphaView;    /**< 可透明的View */
