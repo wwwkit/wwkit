@@ -24,6 +24,7 @@
 		C51F642F1FA9641E0080E4D3 /* WWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C51F642D1FA9641D0080E4D3 /* WWBaseViewController.m */; };
 		C51F64321FA964260080E4D3 /* WWCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C51F64311FA964260080E4D3 /* WWCollectionViewFlowLayout.m */; };
 		C51F64361FA9B3190080E4D3 /* UIImage+WWAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = C51F64351FA9B3190080E4D3 /* UIImage+WWAdd.m */; };
+		C51F64391FA9B8BE0080E4D3 /* WWTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C51F64381FA9B8BE0080E4D3 /* WWTabBarViewController.m */; };
 		DE00C1631F7220C500F8F4E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE00C1621F7220C500F8F4E5 /* Assets.xcassets */; };
 		DE00C1731F7220C500F8F4E5 /* WWKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00C1721F7220C500F8F4E5 /* WWKitTests.m */; };
 		DE00C17E1F7220C600F8F4E5 /* WWKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00C17D1F7220C600F8F4E5 /* WWKitUITests.m */; };
@@ -93,6 +94,8 @@
 		C51F64331FA966260080E4D3 /* FontAndColorMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontAndColorMacro.h; sourceTree = "<group>"; };
 		C51F64341FA9B3190080E4D3 /* UIImage+WWAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+WWAdd.h"; sourceTree = "<group>"; };
 		C51F64351FA9B3190080E4D3 /* UIImage+WWAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WWAdd.m"; sourceTree = "<group>"; };
+		C51F64371FA9B8BE0080E4D3 /* WWTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWTabBarViewController.h; sourceTree = "<group>"; };
+		C51F64381FA9B8BE0080E4D3 /* WWTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWTabBarViewController.m; sourceTree = "<group>"; };
 		CE7A17F47A5E12566595EE2B /* libPods-WWKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WWKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0CB9F1AD5CFF22CC7AE9649 /* Pods-WWKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WWKitUITests/Pods-WWKitUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DE00C1561F7220C500F8F4E5 /* WWKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,6 +298,8 @@
 				04B8C4A11F73A54500FD9EE0 /* WWBaseTableViewCell.m */,
 				04B8C48D1F736D3700FD9EE0 /* WWBaseNavigationViewController.h */,
 				04B8C48E1F736D3700FD9EE0 /* WWBaseNavigationViewController.m */,
+				C51F64371FA9B8BE0080E4D3 /* WWTabBarViewController.h */,
+				C51F64381FA9B8BE0080E4D3 /* WWTabBarViewController.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -680,6 +685,7 @@
 				DEAAAAA51F735E9F00A461F6 /* WWHomeViewController.m in Sources */,
 				04B8C4BE1F73BC0700FD9EE0 /* UIButton+Ext.m in Sources */,
 				04B8C4961F736E6900FD9EE0 /* UIBarButtonItem+Extension.m in Sources */,
+				C51F64391FA9B8BE0080E4D3 /* WWTabBarViewController.m in Sources */,
 				04B8C4A61F73A68700FD9EE0 /* WWHomeCell.m in Sources */,
 				C51F64321FA964260080E4D3 /* WWCollectionViewFlowLayout.m in Sources */,
 				04B8C4AC1F73B67F00FD9EE0 /* NSDate+Utilities.m in Sources */,
