@@ -16,21 +16,21 @@
 
 #pragma mark -  颜色区
 //主题色 导航栏颜色
-#define CNavBgColor  [UIColor colorWithHex:@"00AE68"]
+#define CNavBgColor UIColorHex(@"00AE68")
 //#define CNavBgColor  [UIColor colorWithHexString:@"ffffff"]
-#define CNavBgFontColor  [UIColor colorWithHex:@"ffffff"]
+#define CNavBgFontColor UIColorHex(@"ffffff")
 
 //默认页面背景色
-#define CViewBgColor [UIColor colorWithHex:@"f2f2f2"]
+#define CViewBgColor UIColorHex(@"f2f2f2")
 
 //分割线颜色
-#define CLineColor [UIColor colorWithHex:@"ededed"]
+#define CLineColor UIColorHex(@"ededed")
 
 //次级字色
-#define CFontColor1 [UIColor colorWithHex:@"1f1f1f"]
+#define CFontColor1 UIColorHex(@"1f1f1f")
 
 //再次级字色
-#define CFontColor2 [UIColor colorWithHex:@"5c5c5c"]
+#define CFontColor2 UIColorHex(@"5c5c5c")
 
 
 #pragma mark -  字体区

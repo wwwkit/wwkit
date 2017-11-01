@@ -20,6 +20,7 @@
     // Override point for customization after application launch.
     [self initLocalizable];
     [self initWindow];
+    [self initService];
     return YES;
 }
 

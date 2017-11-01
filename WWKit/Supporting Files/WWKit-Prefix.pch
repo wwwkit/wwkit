@@ -19,6 +19,7 @@
 //基础类
 #import "AppDelegate.h"
 #import "AppDelegate+AppService.h"
+#import "WWBaseNavigationViewController.h"
 
 
 #endif /* WWKit_Prefix_pch */

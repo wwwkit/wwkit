@@ -10,8 +10,17 @@
 
 @interface NSString (Additions)
 
-/**Returns a new UUID NSString e.g. "D1178E50-2A4D-4F1F-9BD3-F6AAB00E06B1"*/
+/**
+  "D1178E50-2A4D-4F1F-9BD3-F6AAB00E06B1"
+ @return Returns a new UUID NSString e.g.
+ */
 + (NSString *)stringWithUUID;
+
+/**
+ 修剪空白字符(空格和换行符)
+ @return 修剪后的字符串
+ */
+- (NSString *)stringByTrim;
 
 // append query string to url
 - (NSURL *)URLByAppendingQueryString:(NSString *)queryString;
