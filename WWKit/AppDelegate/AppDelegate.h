@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WWBaseTabBarController.h"
+#import "WWTabBarViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) WWBaseTabBarController *mainTabBar;
+@property (strong, nonatomic) WWTabBarViewController *mainTabBar;
 
 @end
 

@@ -11,6 +11,7 @@
 #import "UIColor+Hexadecimal.h"
 #import "UIDevice+YYAdd.h"
 #import "UIImage+WWAdd.h"
+<<<<<<< HEAD
 #import "UIButton+Ext.h"
 #import "UIView+Ext.h"
 #import "NSDictionary+UrlEncoding.h"
@@ -19,3 +20,8 @@
 #import "NSURL+Additions.h"
 #import "NSString+JSON.h"
 
+=======
+#import "UILabel+WWAdd.h"
+
+#import "MBProgressHUD+WW.h"
+>>>>>>> c2160764c7386d7b6f304a9123eb1665e684be76
