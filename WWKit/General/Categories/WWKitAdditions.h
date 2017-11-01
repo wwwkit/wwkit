@@ -11,4 +11,4 @@
 #import "NSString+Additions.h"
 #import "UIDevice+YYAdd.h"
 #import "UIView+Ext.h"
-
+#import "UIImage+WWAdd.h"

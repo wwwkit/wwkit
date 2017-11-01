@@ -19,19 +19,23 @@ PODS:
   - SDWebImage (4.2.1):
     - SDWebImage/Core (= 4.2.1)
   - SDWebImage/Core (4.2.1)
+  - YTKNetwork (2.0.4):
+    - AFNetworking (~> 3.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - MBProgressHUD (~> 1.0.0)
   - MJRefresh (~> 3.1.15)
   - SDWebImage (~> 4.0)
+  - YTKNetwork (~> 2.0.4)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: 9af70f5f9327a2cf87f0fb5929f35fcc2fa638ea
   SDWebImage: 1fa4c9edf525b744f002db89f3f5a38b3cd4c541
+  YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
 
-PODFILE CHECKSUM: ada3a5fe16e17819140a5816218a566e1356b5ff
+PODFILE CHECKSUM: a420039a403a37d1b4dcdac0d7fe60c9a634dfe0
 
 COCOAPODS: 1.3.1
