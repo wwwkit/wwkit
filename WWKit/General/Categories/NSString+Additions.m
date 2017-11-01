@@ -11,6 +11,13 @@
 
 @implementation NSString (Additions)
 
++ (NSString *)stringWithUUID {
+    CFUUIDRef uuid = CFUUIDCreate(NULL);
+    CFStringRef string = CFUUIDCreateString(NULL, uuid);
+    CFRelease(uuid);
+    return (__bridge_transfer NSString *)string;
+}
+
 - (NSURL *)URLByAppendingQueryString:(NSString *)queryString {
     if (![queryString length]) {
         return [NSURL URLWithString:self];
@@ -36,11 +43,21 @@
     return [NSString stringWithFormat:@"%@%@", self, queryString];
 }
 
-- (float)heightForFont:(UIFont*)font width:(float)width lineBreakMode:(NSLineBreakMode)lineBreakMode
+- (CGFloat)widthForFont:(UIFont *)font {
+    CGFloat width = [self widthForFont:font width:HUGE lineBreakMode:NSLineBreakByWordWrapping];
+    return width;
+}
+
+- (CGFloat)heightForFont:(UIFont *)font width:(CGFloat)width {
+    CGFloat height = [self heightForFont:font width:width lineBreakMode:NSLineBreakByWordWrapping];
+    return height;
+}
+
+- (CGFloat)heightForFont:(UIFont*)font width:(float)width lineBreakMode:(NSLineBreakMode)lineBreakMode
 {
     NSDictionary *attribute = @{NSFontAttributeName: font};
     
-    CGSize sizeToFit = [self boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+    CGSize sizeToFit = [self boundingRectWithSize:CGSizeMake(width, HUGE) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
     
     
     //  CGSize sizeToFit = [self sizeWithFont:font
@@ -48,7 +65,7 @@
     //                      lineBreakMode:lineBreakMode];
     return sizeToFit.height;
 }
-- (float)widthForFont:(UIFont*)font width:(float)width lineBreakMode:(NSLineBreakMode)lineBreakMode
+- (CGFloat)widthForFont:(UIFont*)font width:(float)width lineBreakMode:(NSLineBreakMode)lineBreakMode
 {
     NSDictionary *attribute = @{NSFontAttributeName: font};
     
