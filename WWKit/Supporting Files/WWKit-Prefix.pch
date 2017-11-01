@@ -10,15 +10,9 @@
 #define WWKit_Prefix_pch
 
 //全局宏
-#import "WWKitAdditions.h"
-#import "WWUtilsMacro.h"
-#import "FontAndColorMacro.h"
-#import "MBProgressHUD+WW.h"
-#import "CommonMacros.h"
-
-//基础类
-#import "AppDelegate.h"
-#import "AppDelegate+AppService.h"
-
+#import "FontAndColorMacro.h" // 主题风格
+#import "WWKitAdditions.h" // 扩展类
+#import "WWUtilsMacro.h" // 工具类
+#import "CommonMacros.h" // 宏定义
 
 #endif /* WWKit_Prefix_pch */

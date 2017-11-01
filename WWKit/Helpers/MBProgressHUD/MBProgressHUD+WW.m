@@ -7,6 +7,8 @@
 //
 
 #import "MBProgressHUD+WW.h"
+#import "AppDelegate.h"
+#import "AppDelegate+AppService.h"
 
 const NSInteger hideTime = 2;
 @implementation MBProgressHUD (WW)

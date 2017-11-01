@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AppDelegate+AppService.h"
 #import "WWHomeViewController.h"
 
 @interface AppDelegate ()

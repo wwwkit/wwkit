@@ -15,10 +15,10 @@
 #pragma mark ————— 初始化服务 —————
 -(void)initService{
     //注册登录状态监听
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(loginStateChange:)
-                                                 name:KNotificationLoginStateChange
-                                               object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(loginStateChange:)
+//                                                 name:KNotificationLoginStateChange
+//                                               object:nil];
     
     //网络状态监听
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -31,6 +31,10 @@
 -(void)initWindow{
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = KWhiteColor;
+    
+    self.mainTabBar = [[WWTabBarViewController alloc] init];
+    self.window.rootViewController = self.mainTabBar;
+    
     [self.window makeKeyAndVisible];
     [[UIButton appearance] setExclusiveTouch:YES];
     //    [[UIButton appearance] setShowsTouchWhenHighlighted:YES];
@@ -84,13 +88,13 @@
 #pragma mark ————— 登录状态处理 —————
 - (void)loginStateChange:(NSNotification *)notification
 {
-    BOOL loginSuccess = [notification.object boolValue];
+    BOOL loginSuccess = YES;//[notification.object boolValue];
     
     if (loginSuccess) {//登陆成功加载主窗口控制器
         
         //为避免自动登录成功刷新tabbar
-        if (!self.mainTabBar || ![self.window.rootViewController isKindOfClass:[WWBaseTabBarController class]]) {
-            self.mainTabBar = [WWBaseTabBarController new];
+        if (!self.mainTabBar || ![self.window.rootViewController isKindOfClass:[WWTabBarViewController class]]) {
+            self.mainTabBar = [WWTabBarViewController new];
             
             CATransition *anima = [CATransition animation];
             anima.type = @"cube";//设置动画的类型

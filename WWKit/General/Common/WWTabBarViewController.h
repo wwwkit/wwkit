@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WWTabBarViewController : UIViewController
+@interface WWTabBarViewController : UITabBarController
 
 @end
