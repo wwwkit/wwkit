@@ -9,8 +9,6 @@
 #import "WWRequest.h"
 #import <AFNetworking/AFNetworking.h>
 
-NSString * const BASERequest = @"https://api.meixian360.cn/";
-
 @implementation WWRequest
 
 /** 全能请求  isResolve 是否通过json 解析*/
@@ -18,12 +16,8 @@ NSString * const BASERequest = @"https://api.meixian360.cn/";
                               parameters:(id)parameters
                            WERequestMode:(WWRequestMode)requestMode
                                isResolve:(BOOL)isResolve
-                                 success:(void (^)(NSURLSessionDataTask * _Nullable, id _Nullable))success
-                                 failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nullable))failure{
-    
-    if (![url hasPrefix:@"http"]) { // 低层网址拼接
-        url = [BASERequest stringByAppendingString:url];
-    }
+                                 success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                                 failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure{
     
     NSMutableDictionary* refactoringParameters;//重构参数,为了拼接必传参数
     if (parameters) {
@@ -37,40 +31,52 @@ NSString * const BASERequest = @"https://api.meixian360.cn/";
     }
     if (requestMode == WWRequestGET) {
         // GET 请求
-        return [manager GET:url parameters:refactoringParameters progress:^(NSProgress * _Nonnull downloadProgress) {
-            
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
-            if (success) {
-                if ([responseObject isKindOfClass:[NSData class]]) {
-                    responseObject = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-                }
-                success(task,responseObject);
-            }
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
-            if (failure) {
-                failure(task,error);
-            }
-        }];
+        return [manager GET:url
+                 parameters:refactoringParameters
+                   progress:^(NSProgress * _Nonnull downloadProgress) {
+                       
+                   }
+                    success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                        
+                        [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
+                        if (success) {
+                            if ([responseObject isKindOfClass:[NSData class]]) {
+                                responseObject = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+                            }
+                            success(task,responseObject);
+                        }
+                    }
+                    failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                        
+                        [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
+                        if (failure) {
+                            failure(task,error);
+                        }
+                    }];
     }else if (requestMode == WWRequestPOST) {
         // POST 请求
-        return [manager POST:url parameters:refactoringParameters progress:^(NSProgress * _Nonnull downloadProgress) {
-            
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
-            if (success) {
-                if ([responseObject isKindOfClass:[NSData class]]) {
-                    responseObject = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-                }
-                success(task,responseObject);
-            }
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
-            if (failure) {
-                failure(task,error);
-            }
-        }];
+        return [manager POST:url
+                  parameters:refactoringParameters
+                    progress:^(NSProgress * _Nonnull downloadProgress) {
+                        
+                    }
+                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                         
+                        [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
+                        if (success) {
+                            if ([responseObject isKindOfClass:[NSData class]]) {
+                                responseObject = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+                            }
+                            success(task,responseObject);
+                        }
+                     }
+                     failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                         
+                        [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
+                        if (failure) {
+                            failure(task,error);
+                        }
+                     }];
     }else{
         NSAssert(false, @"请求参数不能为空！");
         return nil;
@@ -79,9 +85,8 @@ NSString * const BASERequest = @"https://api.meixian360.cn/";
 
 + (NSURLSessionDataTask *)GET:(NSString *)url
                    parameters:(id)parameters
-                    isResolve:(BOOL)isResolve
-                      success:(void (^)(NSURLSessionDataTask * _Nullable, id _Nullable))success
-                      failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nullable))failure {
+                      success:(void (^)(NSURLSessionDataTask * task, id responseObject))success
+                      failure:(void (^)(NSURLSessionDataTask * task, NSError * error))failure {
     
     return [self requestWithUrl:url
                      parameters:parameters
@@ -92,10 +97,9 @@ NSString * const BASERequest = @"https://api.meixian360.cn/";
 }
 
 + (NSURLSessionDataTask *)POST:(NSString *)url
-                   parameters:(id)parameters
-                    isResolve:(BOOL)isResolve
-                      success:(void (^)(NSURLSessionDataTask * _Nullable, id _Nullable))success
-                      failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nullable))failure {
+                    parameters:(id)parameters
+                       success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                       failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
     
     return [self requestWithUrl:url
                      parameters:parameters
@@ -109,9 +113,9 @@ NSString * const BASERequest = @"https://api.meixian360.cn/";
  上传图片
  */
 + (NSURLSessionDownloadTask *)uploadFileWithMode:(NSString*)mode
-                     image:(UIImage*)image
-                   success:(void (^)(NSURLSessionDataTask * _Nullable, id _Nullable))success
-                   failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nullable))failure{
+                                           image:(UIImage*)image
+                                         success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                                         failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure{
     
     return [[AFHTTPSessionManager manager] POST:@"" parameters:@{} constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         NSData *data1 = UIImageJPEGRepresentation(image, 0);
@@ -132,7 +136,7 @@ NSString * const BASERequest = @"https://api.meixian360.cn/";
 + (NSURLSessionDownloadTask *)downLoadFromUrl:(NSString*)url
                                      savePath:(NSString*)path
                                      progress:(void (^)(NSProgress *downloadProgress)) downloadProgressBlock
-                            completionHandler:(void (^)(NSURLResponse *response, NSString *filePath, NSError *error))completionHandler {
+                            completionHandler:(void (^)(NSURLResponse *response, NSString *filePath, NSError * error))completionHandler {
     //默认配置
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     

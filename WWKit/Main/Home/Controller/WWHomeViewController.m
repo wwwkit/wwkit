@@ -8,6 +8,8 @@
 
 #import "WWHomeViewController.h"
 #import "WWHomeCell.h"
+#import "WWBaseDataRequest.h"
+#import "WWHomeModel.h"
 
 @interface WWHomeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -24,14 +26,12 @@
     self.view.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:self.tableView];
     
-//    WWBaseRequest *api = [[WWBaseRequest alloc]initWithUsername:@"111" password:@"111"];
-//    [api startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
-//        // 你可以直接在这里使用 self
-//        DLog(@"succeed");
-//    } failure:^(YTKBaseRequest *request) {
-//        // 你可以直接在这里使用 self
-//        DLog(@"failed");
-//    }];
+    [WWBaseDataRequest requestWithParameters:@{}
+                           withIndicatorView:self.view
+                                   withClass:[WWHomeModel class]
+                           onRequestFinished:^(WWBaseDataRequest *request, WWBaseResponse *result) {
+                               
+                           }];
 
 }
 

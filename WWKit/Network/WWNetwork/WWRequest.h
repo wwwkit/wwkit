@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NSString * const BASERequest = @"https://api.meixian360.cn/";
+
 typedef NS_ENUM(NSInteger, WWRequestMode) {
     WWRequestGET = 0,
     WWRequestPOST,
@@ -15,40 +17,38 @@ typedef NS_ENUM(NSInteger, WWRequestMode) {
 
 @interface WWRequest : NSObject
 
-+ (nullable NSURLSessionDataTask *)GET:(nullable NSString *)url
-                           parameters:(nullable id)parameters
-                            isResolve:(BOOL)isResolve
-                              success:(nullable void (^)(NSURLSessionDataTask * _Nullable, id _Nullable))success
-                              failure:(nullable void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nullable))failure;
++ (NSURLSessionDataTask *)GET:(NSString *)url
+                   parameters:(id)parameters
+                      success:(void (^)(NSURLSessionDataTask * task, id responseObject))success
+                      failure:(void (^)(NSURLSessionDataTask * task, NSError * error))failure;
 
-+ (nullable NSURLSessionDataTask *)POST:(nullable NSString *)url
-                    parameters:(nullable id)parameters
-                     isResolve:(BOOL)isResolve
-                       success:(nullable void (^)(NSURLSessionDataTask * _Nullable, id _Nullable))success
-                       failure:(nullable void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nullable))failure;
++ (NSURLSessionDataTask *)POST:(NSString *)url
+                    parameters:(id)parameters
+                       success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                       failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
 
 /** 全能请求  isResolve 是否通过json 解析*/
-+ (nullable NSURLSessionDataTask *)requestWithUrl:(nullable NSString *)url
-                                      parameters:(nullable id)parameters
-                                   WERequestMode:(WWRequestMode)requestMode
-                                       isResolve:(BOOL)isResolve
-                                         success:(nullable void (^)(NSURLSessionDataTask * _Nullable, id _Nullable))success
-                                         failure:(nullable void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nullable))failure;
++ (NSURLSessionDataTask *)requestWithUrl:(NSString *)url
+                              parameters:(id)parameters
+                           WERequestMode:(WWRequestMode)requestMode
+                               isResolve:(BOOL)isResolve
+                                 success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                                 failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
 
 /**
  上传图片
  */
-+ (nullable NSURLSessionDownloadTask *)uploadFileWithMode:(nullable NSString*)mode
-                                                 image:(nullable UIImage*)image
-                                               success:(nullable void (^)(NSURLSessionDataTask * _Nullable, id _Nullable))success
-                                               failure:(nullable void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nullable))failure;
++ (NSURLSessionDownloadTask *)uploadFileWithMode:(NSString*)mode
+                                           image:(UIImage*)image
+                                         success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                                         failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
 
 /**
  下载文件
  */
-+ (nullable NSURLSessionDownloadTask *)downLoadFromUrl:(nullable NSString*)url
-                                             savePath:(nullable NSString*)path
-                                                      progress:(nullable void (^)(NSProgress * _Nonnull downloadProgress)) downloadProgressBlock
-                                             completionHandler:(nullable void (^)(NSURLResponse * _Nonnull response, NSString * _Nonnull filePath, NSError * _Nonnull error))completionHandler;
++ (NSURLSessionDownloadTask *)downLoadFromUrl:(NSString*)url
+                                     savePath:(NSString*)path
+                                     progress:(void (^)(NSProgress *downloadProgress)) downloadProgressBlock
+                            completionHandler:(void (^)(NSURLResponse *response, NSString *filePath, NSError * error))completionHandler;
 
 @end

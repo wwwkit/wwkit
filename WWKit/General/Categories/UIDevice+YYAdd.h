@@ -106,7 +106,6 @@ typedef NS_OPTIONS(NSUInteger, YYNetworkTrafficType) {
      _lastTime = time;
  
  
- @param type traffic types
  @return bytes counter.
  */
 - (uint64_t)getNetworkTrafficBytes:(YYNetworkTrafficType)types;

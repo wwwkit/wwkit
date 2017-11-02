@@ -33,12 +33,17 @@
 		C51F643C1FA9BA990080E4D3 /* WWTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C51F643B1FA9BA990080E4D3 /* WWTabBarItem.m */; };
 		C51F643F1FA9BAFF0080E4D3 /* UILabel+WWAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = C51F643E1FA9BAFF0080E4D3 /* UILabel+WWAdd.m */; };
 		C51F64421FA9C02B0080E4D3 /* WWTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C51F64411FA9C02B0080E4D3 /* WWTabBarViewController.m */; };
+		C51F64781FAB596C0080E4D3 /* WWHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C51F64771FAB596C0080E4D3 /* WWHomeModel.m */; };
+		C51F647B1FAB652E0080E4D3 /* WWBaseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C51F647A1FAB652E0080E4D3 /* WWBaseResponse.m */; };
+		C51F647E1FAB6A410080E4D3 /* WWBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C51F647D1FAB6A410080E4D3 /* WWBaseModel.m */; };
+		C59D5F201FAB784100D32D52 /* WWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAAAA9F1F735C6100A461F6 /* WWHomeViewController.m */; };
+		C59D5F211FAB785300D32D52 /* WWBaseDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C51F64711FAAE3C50080E4D3 /* WWBaseDataRequest.m */; };
+		C59D5F221FAB786200D32D52 /* WWRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C51F646C1FAAD01D0080E4D3 /* WWRequest.m */; };
 		DE00C1631F7220C500F8F4E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE00C1621F7220C500F8F4E5 /* Assets.xcassets */; };
 		DE00C1731F7220C500F8F4E5 /* WWKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00C1721F7220C500F8F4E5 /* WWKitTests.m */; };
 		DE00C17E1F7220C600F8F4E5 /* WWKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00C17D1F7220C600F8F4E5 /* WWKitUITests.m */; };
 		DE3911A21F72369400D74266 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3911A11F72369400D74266 /* Default-568h@2x.png */; };
 		DEAAAAA31F735E9F00A461F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAAAA931F735B0C00A461F6 /* AppDelegate.m */; };
-		DEAAAAA51F735E9F00A461F6 /* WWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAAAA9F1F735C6100A461F6 /* WWHomeViewController.m */; };
 		DEAAAAA61F735EC500A461F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00C1681F7220C500F8F4E5 /* main.m */; };
 		DEAAAAC61F73A1BF00A461F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEAAAAC81F73A1BF00A461F6 /* Localizable.strings */; };
 		DEAAAAC91F73A1C200A461F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEAAAACB1F73A1C200A461F6 /* InfoPlist.strings */; };
@@ -72,7 +77,6 @@
 		0440BE741FA9AD96009C5C02 /* OpenUDID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
 		0440BE781FA9B0FE009C5C02 /* UIDevice+YYAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+YYAdd.h"; sourceTree = "<group>"; };
 		0440BE791FA9B0FE009C5C02 /* UIDevice+YYAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+YYAdd.m"; sourceTree = "<group>"; };
-		0440BE7B1FA9B14A009C5C02 /* YYKitMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYKitMacro.h; sourceTree = "<group>"; };
 		0440BE7D1FA9BC2C009C5C02 /* WWLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWLoginViewController.h; sourceTree = "<group>"; };
 		0440BE7E1FA9BC2C009C5C02 /* WWLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWLoginViewController.m; sourceTree = "<group>"; };
 		04B8C48D1F736D3700FD9EE0 /* WWBaseNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWBaseNavigationViewController.h; sourceTree = "<group>"; };
@@ -129,6 +133,14 @@
 		C51F646C1FAAD01D0080E4D3 /* WWRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWRequest.m; sourceTree = "<group>"; };
 		C51F646D1FAAD01E0080E4D3 /* WWRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWRequest.h; sourceTree = "<group>"; };
 		C51F646F1FAAD9A40080E4D3 /* YYKitMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYKitMacro.h; sourceTree = "<group>"; };
+		C51F64701FAAE3C50080E4D3 /* WWBaseDataRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWBaseDataRequest.h; sourceTree = "<group>"; };
+		C51F64711FAAE3C50080E4D3 /* WWBaseDataRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWBaseDataRequest.m; sourceTree = "<group>"; };
+		C51F64761FAB596C0080E4D3 /* WWHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWHomeModel.h; sourceTree = "<group>"; };
+		C51F64771FAB596C0080E4D3 /* WWHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWHomeModel.m; sourceTree = "<group>"; };
+		C51F64791FAB652E0080E4D3 /* WWBaseResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWBaseResponse.h; sourceTree = "<group>"; };
+		C51F647A1FAB652E0080E4D3 /* WWBaseResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWBaseResponse.m; sourceTree = "<group>"; };
+		C51F647C1FAB6A410080E4D3 /* WWBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWBaseModel.h; sourceTree = "<group>"; };
+		C51F647D1FAB6A410080E4D3 /* WWBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWBaseModel.m; sourceTree = "<group>"; };
 		CE7A17F47A5E12566595EE2B /* libPods-WWKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WWKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0CB9F1AD5CFF22CC7AE9649 /* Pods-WWKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WWKitUITests/Pods-WWKitUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DE00C1561F7220C500F8F4E5 /* WWKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,7 +260,6 @@
 			children = (
 				C51F64611FAACF6E0080E4D3 /* WWNetwork */,
 				C51F646B1FAACFE50080E4D3 /* Common */,
-				C51F64641FAACF6E0080E4D3 /* BaseRequest */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -262,16 +273,15 @@
 			path = WWNetwork;
 			sourceTree = "<group>";
 		};
-		C51F64641FAACF6E0080E4D3 /* BaseRequest */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BaseRequest;
-			sourceTree = "<group>";
-		};
 		C51F646B1FAACFE50080E4D3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C51F64701FAAE3C50080E4D3 /* WWBaseDataRequest.h */,
+				C51F64711FAAE3C50080E4D3 /* WWBaseDataRequest.m */,
+				C51F64791FAB652E0080E4D3 /* WWBaseResponse.h */,
+				C51F647A1FAB652E0080E4D3 /* WWBaseResponse.m */,
+				C51F647C1FAB6A410080E4D3 /* WWBaseModel.h */,
+				C51F647D1FAB6A410080E4D3 /* WWBaseModel.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -427,12 +437,6 @@
 				04B8C49E1F7396ED00FD9EE0 /* UIView+Ext.m */,
 				04B8C4971F73922E00FD9EE0 /* UIColor+Hexadecimal.h */,
 				04B8C4981F73922E00FD9EE0 /* UIColor+Hexadecimal.m */,
-				04B8C4941F736E6900FD9EE0 /* UIBarButtonItem+Extension.h */,
-				04B8C4951F736E6900FD9EE0 /* UIBarButtonItem+Extension.m */,
-				04B8C4BC1F73BC0700FD9EE0 /* UIButton+Ext.h */,
-				04B8C4BD1F73BC0700FD9EE0 /* UIButton+Ext.m */,
-				C51F64341FA9B3190080E4D3 /* UIImage+WWAdd.h */,
-				C51F64351FA9B3190080E4D3 /* UIImage+WWAdd.m */,
 				04B8C4AA1F73B67F00FD9EE0 /* NSDate+Utilities.h */,
 				04B8C4AB1F73B67F00FD9EE0 /* NSDate+Utilities.m */,
 				04B8C4B61F73BB3F00FD9EE0 /* NSString+JSON.h */,
@@ -487,6 +491,8 @@
 		DEAAAAA11F735C6100A461F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C51F64761FAB596C0080E4D3 /* WWHomeModel.h */,
+				C51F64771FAB596C0080E4D3 /* WWHomeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -799,21 +805,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59D5F221FAB786200D32D52 /* WWRequest.m in Sources */,
+				C59D5F211FAB785300D32D52 /* WWBaseDataRequest.m in Sources */,
+				C59D5F201FAB784100D32D52 /* WWHomeViewController.m in Sources */,
 				DEAAAAA61F735EC500A461F6 /* main.m in Sources */,
+				C51F647B1FAB652E0080E4D3 /* WWBaseResponse.m in Sources */,
 				04B8C4991F73922E00FD9EE0 /* UIColor+Hexadecimal.m in Sources */,
 				04B8C4AF1F73B9BD00FD9EE0 /* NSDictionary+UrlEncoding.m in Sources */,
 				DEAAAAA31F735E9F00A461F6 /* AppDelegate.m in Sources */,
 				04B8C4BB1F73BBAE00FD9EE0 /* NSURL+Additions.m in Sources */,
 				04B8C48F1F736D3700FD9EE0 /* WWBaseNavigationViewController.m in Sources */,
 				0440BE6A1FA9A85D009C5C02 /* AppDelegate+AppService.m in Sources */,
+				C51F64781FAB596C0080E4D3 /* WWHomeModel.m in Sources */,
 				04B8C4B51F73BA4700FD9EE0 /* NSString+Additions.m in Sources */,
 				04B8C4A21F73A54500FD9EE0 /* WWBaseTableViewCell.m in Sources */,
 				04B8C49F1F7396ED00FD9EE0 /* UIView+Ext.m in Sources */,
+				C51F647E1FAB6A410080E4D3 /* WWBaseModel.m in Sources */,
 				04C616B21FA99E0300F8E33B /* MBProgressHUD+WW.m in Sources */,
 				C51F642F1FA9641E0080E4D3 /* WWBaseViewController.m in Sources */,
 				0440BE7F1FA9BC2C009C5C02 /* WWLoginViewController.m in Sources */,
 				C51F643C1FA9BA990080E4D3 /* WWTabBarItem.m in Sources */,
-				DEAAAAA51F735E9F00A461F6 /* WWHomeViewController.m in Sources */,
 				04B8C4BE1F73BC0700FD9EE0 /* UIButton+Ext.m in Sources */,
 				04C616B61FA9A00800F8E33B /* WWFPSLabel.m in Sources */,
 				0440BE7A1FA9B0FF009C5C02 /* UIDevice+YYAdd.m in Sources */,
