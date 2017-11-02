@@ -37,10 +37,4 @@
 //单例
 + (AppDelegate *)shareAppDelegate;
 
-/**
- 当前顶层控制器
- */
--(UIViewController*) getCurrentVC;
-
--(UIViewController*) getCurrentUIVC;
 @end

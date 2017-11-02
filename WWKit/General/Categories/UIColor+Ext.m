@@ -1,20 +1,20 @@
 //
-//  UIColor+Hexadecimal.m
+//  UIColor+Ext.m
 //  WWKit
 //
 //  Created by awen on 2017/9/21.
 //  Copyright © 2017年 wwkit. All rights reserved.
 //
 
-#import "UIColor+Hexadecimal.h"
+#import "UIColor+Ext.h"
 #import "YYKitMacro.h"
 
-YYSYNTH_DUMMY_CLASS(UIColor_Hexadecimal)
+YYSYNTH_DUMMY_CLASS(UIColor_Ext)
 
 
 #define CLAMP_COLOR_VALUE(v) (v) = (v) < 0 ? 0 : (v) > 1 ? 1 : (v)
 
-void YY_RGB2HSL(CGFloat r, CGFloat g, CGFloat b,
+void RGB2HSL(CGFloat r, CGFloat g, CGFloat b,
                 CGFloat *h, CGFloat *s, CGFloat *l) {
     CLAMP_COLOR_VALUE(r);
     CLAMP_COLOR_VALUE(g);
@@ -38,7 +38,7 @@ void YY_RGB2HSL(CGFloat r, CGFloat g, CGFloat b,
     if (*h < 0) *h += 1;
 }
 
-void YY_HSL2RGB(CGFloat h, CGFloat s, CGFloat l,
+void HSL2RGB(CGFloat h, CGFloat s, CGFloat l,
                 CGFloat *r, CGFloat *g, CGFloat *b) {
     CLAMP_COLOR_VALUE(h);
     CLAMP_COLOR_VALUE(s);
@@ -77,7 +77,7 @@ void YY_HSL2RGB(CGFloat h, CGFloat s, CGFloat l,
     }
 }
 
-void YY_RGB2HSB(CGFloat r, CGFloat g, CGFloat b,
+void RGB2HSB(CGFloat r, CGFloat g, CGFloat b,
                 CGFloat *h, CGFloat *s, CGFloat *v) {
     CLAMP_COLOR_VALUE(r);
     CLAMP_COLOR_VALUE(g);
@@ -101,7 +101,7 @@ void YY_RGB2HSB(CGFloat r, CGFloat g, CGFloat b,
     if (*h < 0) *h += 1;
 }
 
-void YY_HSB2RGB(CGFloat h, CGFloat s, CGFloat v,
+void HSB2RGB(CGFloat h, CGFloat s, CGFloat v,
                 CGFloat *r, CGFloat *g, CGFloat *b) {
     CLAMP_COLOR_VALUE(h);
     CLAMP_COLOR_VALUE(s);
@@ -130,7 +130,7 @@ void YY_HSB2RGB(CGFloat h, CGFloat s, CGFloat v,
     }
 }
 
-void YY_RGB2CMYK(CGFloat r, CGFloat g, CGFloat b,
+void RGB2CMYK(CGFloat r, CGFloat g, CGFloat b,
                  CGFloat *c, CGFloat *m, CGFloat *y, CGFloat *k) {
     CLAMP_COLOR_VALUE(r);
     CLAMP_COLOR_VALUE(g);
@@ -150,7 +150,7 @@ void YY_RGB2CMYK(CGFloat r, CGFloat g, CGFloat b,
     }
 }
 
-void YY_CMYK2RGB(CGFloat c, CGFloat m, CGFloat y, CGFloat k,
+void CMYK2RGB(CGFloat c, CGFloat m, CGFloat y, CGFloat k,
                  CGFloat *r, CGFloat *g, CGFloat *b) {
     CLAMP_COLOR_VALUE(c);
     CLAMP_COLOR_VALUE(m);
@@ -162,7 +162,7 @@ void YY_CMYK2RGB(CGFloat c, CGFloat m, CGFloat y, CGFloat k,
     *b = (1 - y) * (1 - k);
 }
 
-void YY_HSB2HSL(CGFloat h, CGFloat s, CGFloat b,
+void HSB2HSL(CGFloat h, CGFloat s, CGFloat b,
                 CGFloat *hh, CGFloat *ss, CGFloat *ll) {
     CLAMP_COLOR_VALUE(h);
     CLAMP_COLOR_VALUE(s);
@@ -177,7 +177,7 @@ void YY_HSB2HSL(CGFloat h, CGFloat s, CGFloat b,
     }
 }
 
-void YY_HSL2HSB(CGFloat h, CGFloat s, CGFloat l,
+void HSL2HSB(CGFloat h, CGFloat s, CGFloat l,
                 CGFloat *hh, CGFloat *ss, CGFloat *bb) {
     CLAMP_COLOR_VALUE(h);
     CLAMP_COLOR_VALUE(s);
@@ -195,14 +195,14 @@ void YY_HSL2HSB(CGFloat h, CGFloat s, CGFloat l,
 
 #undef CLAMP_COLOR_VALUE
 
-@implementation UIColor (Hexadecimal)
+@implementation UIColor (Ext)
 
 + (UIColor *)colorWithHue:(CGFloat)hue
                saturation:(CGFloat)saturation
                 lightness:(CGFloat)lightness
                     alpha:(CGFloat)alpha {
     CGFloat r, g, b;
-    YY_HSL2RGB(hue, saturation, lightness, &r, &g, &b);
+    HSL2RGB(hue, saturation, lightness, &r, &g, &b);
     return [UIColor colorWithRed:r green:g blue:b alpha:alpha];
 }
 + (UIColor *)colorWithCyan:(CGFloat)cyan
@@ -211,7 +211,7 @@ void YY_HSL2HSB(CGFloat h, CGFloat s, CGFloat l,
                      black:(CGFloat)black
                      alpha:(CGFloat)alpha {
     CGFloat r, g, b;
-    YY_CMYK2RGB(cyan, magenta, yellow, black, &r, &g, &b);
+    CMYK2RGB(cyan, magenta, yellow, black, &r, &g, &b);
     return [UIColor colorWithRed:r green:g blue:b alpha:alpha];
 }
 
@@ -372,7 +372,7 @@ static BOOL hexStrToRGBA(NSString *str,
     if (![self getRed:&r green:&g blue:&b alpha:&a]) {
         return NO;
     }
-    YY_RGB2HSL(r, g, b, hue, saturation, lightness);
+    RGB2HSL(r, g, b, hue, saturation, lightness);
     *alpha = a;
     return YES;
 }
@@ -386,7 +386,7 @@ static BOOL hexStrToRGBA(NSString *str,
     if (![self getRed:&r green:&g blue:&b alpha:&a]) {
         return NO;
     }
-    YY_RGB2CMYK(r, g, b, cyan, magenta, yellow, black);
+    RGB2CMYK(r, g, b, cyan, magenta, yellow, black);
     *alpha = a;
     return YES;
 }
