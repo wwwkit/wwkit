@@ -135,6 +135,9 @@
 		C51F643E1FA9BAFF0080E4D3 /* UILabel+WWAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+WWAdd.m"; sourceTree = "<group>"; };
 		C51F64401FA9C02B0080E4D3 /* WWTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWTabBarViewController.h; sourceTree = "<group>"; };
 		C51F64411FA9C02B0080E4D3 /* WWTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWTabBarViewController.m; sourceTree = "<group>"; };
+		C51F646C1FAAD01D0080E4D3 /* WWRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWRequest.m; sourceTree = "<group>"; };
+		C51F646D1FAAD01E0080E4D3 /* WWRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWRequest.h; sourceTree = "<group>"; };
+		C51F646F1FAAD9A40080E4D3 /* YYKitMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYKitMacro.h; sourceTree = "<group>"; };
 		CE7A17F47A5E12566595EE2B /* libPods-WWKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WWKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0CB9F1AD5CFF22CC7AE9649 /* Pods-WWKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WWKitUITests/Pods-WWKitUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DE00C1561F7220C500F8F4E5 /* WWKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,6 +252,39 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C51F64601FAACF6E0080E4D3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C51F64611FAACF6E0080E4D3 /* WWNetwork */,
+				C51F646B1FAACFE50080E4D3 /* Common */,
+				C51F64641FAACF6E0080E4D3 /* BaseRequest */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C51F64611FAACF6E0080E4D3 /* WWNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				C51F646D1FAAD01E0080E4D3 /* WWRequest.h */,
+				C51F646C1FAAD01D0080E4D3 /* WWRequest.m */,
+			);
+			path = WWNetwork;
+			sourceTree = "<group>";
+		};
+		C51F64641FAACF6E0080E4D3 /* BaseRequest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseRequest;
+			sourceTree = "<group>";
+		};
+		C51F646B1FAACFE50080E4D3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		DE00C14D1F7220C500F8F4E5 = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +315,7 @@
 				DEAAAA951F735B2100A461F6 /* General */,
 				DEAAAA941F735B2100A461F6 /* Helpers */,
 				DEAAAA981F735B2100A461F6 /* Macro */,
+				C51F64601FAACF6E0080E4D3 /* Network */,
 				DEAAAA961F735B2100A461F6 /* Main */,
 				DEAAAA991F735B2100A461F6 /* Resources */,
 				DEAAAAA71F73903D00A461F6 /* Supporting Files */,
@@ -360,7 +397,7 @@
 				04B8C4A31F73A5D100FD9EE0 /* WWUtilsMacro.h */,
 				C51F64331FA966260080E4D3 /* FontAndColorMacro.h */,
 				0440BE6B1FA9A8B6009C5C02 /* CommonMacros.h */,
-				0440BE7B1FA9B14A009C5C02 /* YYKitMacro.h */,
+				C51F646F1FAAD9A40080E4D3 /* YYKitMacro.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";

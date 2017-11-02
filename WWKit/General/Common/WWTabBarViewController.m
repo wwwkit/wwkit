@@ -8,11 +8,12 @@
 
 #import "WWTabBarViewController.h"
 #import "WWBaseViewController.h"
+#import "WWHomeViewController.h"
 #import "WWBaseNavigationViewController.h"
 
 @interface WWTabBarViewController ()
 
-@property (nonatomic,strong) WWBaseViewController *viewController1;
+@property (nonatomic,strong) WWHomeViewController *viewController1;
 @property (nonatomic,strong) WWBaseViewController *viewController2;
 @property (nonatomic,strong) WWBaseViewController *viewController3;
 
@@ -24,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.viewController1 = [[WWBaseViewController alloc]init];
+    self.viewController1 = [[WWHomeViewController alloc]init];
     WWBaseNavigationViewController *nav1 = [[WWBaseNavigationViewController alloc]initWithRootViewController:self.viewController1];
     nav1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[[UIImage imageNamed:@"AppIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"AppIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     

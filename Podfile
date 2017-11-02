@@ -7,10 +7,10 @@ target 'WWKit' do
 
   # Pods for WWKit
   pod 'AFNetworking', '~> 3.1.0'
-  pod 'YTKNetwork', '~> 2.0.4'
   pod 'MJRefresh', '~> 3.1.15'
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'SDWebImage', '~> 4.0'
+  pod 'FMDB', '~> 2.7.2'
 
   target 'WWKitTests' do
     inherit! :search_paths

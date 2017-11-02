@@ -23,6 +23,16 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:self.tableView];
+    
+//    WWBaseRequest *api = [[WWBaseRequest alloc]initWithUsername:@"111" password:@"111"];
+//    [api startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
+//        // 你可以直接在这里使用 self
+//        DLog(@"succeed");
+//    } failure:^(YTKBaseRequest *request) {
+//        // 你可以直接在这里使用 self
+//        DLog(@"failed");
+//    }];
+
 }
 
 - (UITableView *)tableView {

@@ -31,7 +31,7 @@
 #pragma mark ————— 初始化window —————
 -(void)initWindow{
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = KWhiteColor;
+    self.window.backgroundColor = [UIColor whiteColor];
     
     self.mainTabBar = [[WWTabBarViewController alloc] init];
     self.window.rootViewController = self.mainTabBar;
@@ -39,7 +39,7 @@
     [self.window makeKeyAndVisible];
     [[UIButton appearance] setExclusiveTouch:YES];
     //    [[UIButton appearance] setShowsTouchWhenHighlighted:YES];
-    [UIActivityIndicatorView appearanceWhenContainedIn:[MBProgressHUD class], nil].color = KWhiteColor;
+    [UIActivityIndicatorView appearanceWhenContainedIn:[MBProgressHUD class], nil].color = [UIColor whiteColor];
     if (@available(iOS 11.0, *)){
         [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     }
