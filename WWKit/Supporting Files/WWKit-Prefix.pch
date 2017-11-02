@@ -10,7 +10,6 @@
 #define WWKit_Prefix_pch
 
 //全局宏
-<<<<<<< HEAD
 #import "WWKitAdditions.h"
 #import "WWUtilsMacro.h"
 #import "FontAndColorMacro.h"
@@ -22,11 +21,9 @@
 #import "AppDelegate+AppService.h"
 #import "WWBaseNavigationViewController.h"
 
-=======
 #import "FontAndColorMacro.h" // 主题风格
 #import "WWKitAdditions.h" // 扩展类
 #import "WWUtilsMacro.h" // 工具类
 #import "CommonMacros.h" // 宏定义
->>>>>>> c2160764c7386d7b6f304a9123eb1665e684be76
 
 #endif /* WWKit_Prefix_pch */

@@ -1,5 +1,5 @@
 //
-//  UIColor+Hexadecimal.h
+//  UIColor+Ext.h
 //  WWKit
 //
 //  Created by awen on 2017/9/21.
@@ -10,28 +10,28 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-extern void YY_RGB2HSL(CGFloat r, CGFloat g, CGFloat b,
+extern void RGB2HSL(CGFloat r, CGFloat g, CGFloat b,
                        CGFloat *h, CGFloat *s, CGFloat *l);
 
-extern void YY_HSL2RGB(CGFloat h, CGFloat s, CGFloat l,
+extern void HSL2RGB(CGFloat h, CGFloat s, CGFloat l,
                        CGFloat *r, CGFloat *g, CGFloat *b);
 
-extern void YY_RGB2HSB(CGFloat r, CGFloat g, CGFloat b,
+extern void RGB2HSB(CGFloat r, CGFloat g, CGFloat b,
                        CGFloat *h, CGFloat *s, CGFloat *v);
 
-extern void YY_HSB2RGB(CGFloat h, CGFloat s, CGFloat v,
+extern void HSB2RGB(CGFloat h, CGFloat s, CGFloat v,
                        CGFloat *r, CGFloat *g, CGFloat *b);
 
-extern void YY_RGB2CMYK(CGFloat r, CGFloat g, CGFloat b,
+extern void RGB2CMYK(CGFloat r, CGFloat g, CGFloat b,
                         CGFloat *c, CGFloat *m, CGFloat *y, CGFloat *k);
 
-extern void YY_CMYK2RGB(CGFloat c, CGFloat m, CGFloat y, CGFloat k,
+extern void CMYK2RGB(CGFloat c, CGFloat m, CGFloat y, CGFloat k,
                         CGFloat *r, CGFloat *g, CGFloat *b);
 
-extern void YY_HSB2HSL(CGFloat h, CGFloat s, CGFloat b,
+extern void HSB2HSL(CGFloat h, CGFloat s, CGFloat b,
                        CGFloat *hh, CGFloat *ss, CGFloat *ll);
 
-extern void YY_HSL2HSB(CGFloat h, CGFloat s, CGFloat l,
+extern void HSL2HSB(CGFloat h, CGFloat s, CGFloat l,
                        CGFloat *hh, CGFloat *ss, CGFloat *bb);
 
 
@@ -64,9 +64,9 @@ extern void YY_HSL2HSB(CGFloat h, CGFloat s, CGFloat l,
  and values above `1.0` are interpreted as `1.0`.
  
  If you want convert color between more color space (CIEXYZ,Lab,YUV...),
- see https://github.com/ibireme/yy_color_convertor
+ see https://github.com/ibireme/color_convertor
  */
-@interface UIColor (Hexadecimal)
+@interface UIColor (Ext)
 
 
 #pragma mark - Create a UIColor Object

@@ -6,13 +6,15 @@
 //  Copyright © 2017年 wwkit. All rights reserved.
 //
 
-#import "UIBarButtonItem+Extension.h"
-#import "UIBarButtonItem+Extension.h"
-#import "UIColor+Hexadecimal.h"
+#import "UIBarButtonItem+Ext.h"
+#import "UINavigationBar+Ext.h"
 #import "UIDevice+YYAdd.h"
+#import "UILabel+WWAdd.h"
 #import "UIImage+WWAdd.h"
-<<<<<<< HEAD
+#import "UIFont+WWTTF.h"
 #import "UIButton+Ext.h"
+#import "UIWindow+Ext.h"
+#import "UIColor+Ext.h"
 #import "UIView+Ext.h"
 #import "NSDictionary+UrlEncoding.h"
 #import "NSString+Additions.h"
@@ -20,8 +22,4 @@
 #import "NSURL+Additions.h"
 #import "NSString+JSON.h"
 
-=======
-#import "UILabel+WWAdd.h"
-
 #import "MBProgressHUD+WW.h"
->>>>>>> c2160764c7386d7b6f304a9123eb1665e684be76

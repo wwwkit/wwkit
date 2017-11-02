@@ -8,13 +8,12 @@
 
 #import "MBProgressHUD+WW.h"
 #import "AppDelegate.h"
-#import "AppDelegate+AppService.h"
 
 const NSInteger hideTime = 2;
 @implementation MBProgressHUD (WW)
 + (MBProgressHUD*)createMBProgressHUDviewWithMessage:(NSString*)message isWindiw:(BOOL)isWindow
 {
-    UIView  *view = isWindow? (UIView*)[UIApplication sharedApplication].delegate.window:[kAppDelegate getCurrentUIVC].view;
+    UIView  *view = isWindow? (UIView*)[UIApplication sharedApplication].delegate.window:[kAppWindow currentVC].view;
     MBProgressHUD * hud = [MBProgressHUD HUDForView:view];
     if (!hud) {
         hud =[MBProgressHUD showHUDAddedTo:view animated:YES];
@@ -120,9 +119,8 @@ const NSInteger hideTime = 2;
 }
 + (void)hideHUD
 {
-    UIView  *winView =(UIView*)[UIApplication sharedApplication].delegate.window;
-    [self hideAllHUDsForView:winView animated:YES];
-    [self hideAllHUDsForView:[kAppDelegate getCurrentUIVC].view animated:YES];
+    [self hideAllHUDsForView:kAppWindow animated:YES];
+    [self hideAllHUDsForView:[kAppWindow currentVC].view animated:YES];
 }
 
 #pragma mark ————— 顶部tip —————
@@ -159,7 +157,7 @@ const NSInteger hideTime = 2;
     }else{
         label.height = [msg heightForFont:label.font width:label.width] + 2 * padding;
         label.bottom = (kiOS7Later ? 64 : 0);
-        [[kAppDelegate getCurrentUIVC].view addSubview:label];
+        [[kAppWindow currentVC].view addSubview:label];
         
         [UIView animateWithDuration:0.3 animations:^{
             label.top = (kiOS7Later ? 64 : 0);

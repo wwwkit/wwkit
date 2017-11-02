@@ -10,9 +10,12 @@
 		0440BE6A1FA9A85D009C5C02 /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440BE691FA9A85D009C5C02 /* AppDelegate+AppService.m */; };
 		0440BE7A1FA9B0FF009C5C02 /* UIDevice+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440BE791FA9B0FE009C5C02 /* UIDevice+YYAdd.m */; };
 		0440BE7F1FA9BC2C009C5C02 /* WWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440BE7E1FA9BC2C009C5C02 /* WWLoginViewController.m */; };
+		0440BE821FA9D14E009C5C02 /* UIFont+WWTTF.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440BE811FA9D14E009C5C02 /* UIFont+WWTTF.m */; };
+		0440BE851FA9D614009C5C02 /* UINavigationBar+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440BE841FA9D614009C5C02 /* UINavigationBar+Ext.m */; };
+		0440BE881FA9D782009C5C02 /* UIWindow+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440BE871FA9D782009C5C02 /* UIWindow+Ext.m */; };
 		04B8C48F1F736D3700FD9EE0 /* WWBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C48E1F736D3700FD9EE0 /* WWBaseNavigationViewController.m */; };
-		04B8C4961F736E6900FD9EE0 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C4951F736E6900FD9EE0 /* UIBarButtonItem+Extension.m */; };
-		04B8C4991F73922E00FD9EE0 /* UIColor+Hexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C4981F73922E00FD9EE0 /* UIColor+Hexadecimal.m */; };
+		04B8C4961F736E6900FD9EE0 /* UIBarButtonItem+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C4951F736E6900FD9EE0 /* UIBarButtonItem+Ext.m */; };
+		04B8C4991F73922E00FD9EE0 /* UIColor+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C4981F73922E00FD9EE0 /* UIColor+Ext.m */; };
 		04B8C49F1F7396ED00FD9EE0 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C49E1F7396ED00FD9EE0 /* UIView+Ext.m */; };
 		04B8C4A21F73A54500FD9EE0 /* WWBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C4A11F73A54500FD9EE0 /* WWBaseTableViewCell.m */; };
 		04B8C4A61F73A68700FD9EE0 /* WWHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C4A51F73A68700FD9EE0 /* WWHomeCell.m */; };
@@ -75,12 +78,18 @@
 		0440BE7B1FA9B14A009C5C02 /* YYKitMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYKitMacro.h; sourceTree = "<group>"; };
 		0440BE7D1FA9BC2C009C5C02 /* WWLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWLoginViewController.h; sourceTree = "<group>"; };
 		0440BE7E1FA9BC2C009C5C02 /* WWLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWLoginViewController.m; sourceTree = "<group>"; };
+		0440BE801FA9D14D009C5C02 /* UIFont+WWTTF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+WWTTF.h"; sourceTree = "<group>"; };
+		0440BE811FA9D14E009C5C02 /* UIFont+WWTTF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+WWTTF.m"; sourceTree = "<group>"; };
+		0440BE831FA9D614009C5C02 /* UINavigationBar+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Ext.h"; sourceTree = "<group>"; };
+		0440BE841FA9D614009C5C02 /* UINavigationBar+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Ext.m"; sourceTree = "<group>"; };
+		0440BE861FA9D782009C5C02 /* UIWindow+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Ext.h"; sourceTree = "<group>"; };
+		0440BE871FA9D782009C5C02 /* UIWindow+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Ext.m"; sourceTree = "<group>"; };
 		04B8C48D1F736D3700FD9EE0 /* WWBaseNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWBaseNavigationViewController.h; sourceTree = "<group>"; };
 		04B8C48E1F736D3700FD9EE0 /* WWBaseNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWBaseNavigationViewController.m; sourceTree = "<group>"; };
-		04B8C4941F736E6900FD9EE0 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
-		04B8C4951F736E6900FD9EE0 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
-		04B8C4971F73922E00FD9EE0 /* UIColor+Hexadecimal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hexadecimal.h"; sourceTree = "<group>"; };
-		04B8C4981F73922E00FD9EE0 /* UIColor+Hexadecimal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hexadecimal.m"; sourceTree = "<group>"; };
+		04B8C4941F736E6900FD9EE0 /* UIBarButtonItem+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Ext.h"; sourceTree = "<group>"; };
+		04B8C4951F736E6900FD9EE0 /* UIBarButtonItem+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Ext.m"; sourceTree = "<group>"; };
+		04B8C4971F73922E00FD9EE0 /* UIColor+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Ext.h"; sourceTree = "<group>"; };
+		04B8C4981F73922E00FD9EE0 /* UIColor+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Ext.m"; sourceTree = "<group>"; };
 		04B8C49C1F73958500FD9EE0 /* WWKitAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWKitAdditions.h; sourceTree = "<group>"; };
 		04B8C49D1F7396ED00FD9EE0 /* UIView+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Ext.h"; sourceTree = "<group>"; };
 		04B8C49E1F7396ED00FD9EE0 /* UIView+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ext.m"; sourceTree = "<group>"; };
@@ -376,6 +385,8 @@
 				04B8C48E1F736D3700FD9EE0 /* WWBaseNavigationViewController.m */,
 				C51F64401FA9C02B0080E4D3 /* WWTabBarViewController.h */,
 				C51F64411FA9C02B0080E4D3 /* WWTabBarViewController.m */,
+				C51F643A1FA9BA990080E4D3 /* WWTabBarItem.h */,
+				C51F643B1FA9BA990080E4D3 /* WWTabBarItem.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -386,16 +397,24 @@
 				04B8C49C1F73958500FD9EE0 /* WWKitAdditions.h */,
 				0440BE781FA9B0FE009C5C02 /* UIDevice+YYAdd.h */,
 				0440BE791FA9B0FE009C5C02 /* UIDevice+YYAdd.m */,
+				0440BE801FA9D14D009C5C02 /* UIFont+WWTTF.h */,
+				0440BE811FA9D14E009C5C02 /* UIFont+WWTTF.m */,
 				04B8C49D1F7396ED00FD9EE0 /* UIView+Ext.h */,
 				04B8C49E1F7396ED00FD9EE0 /* UIView+Ext.m */,
-				04B8C4971F73922E00FD9EE0 /* UIColor+Hexadecimal.h */,
-				04B8C4981F73922E00FD9EE0 /* UIColor+Hexadecimal.m */,
-				04B8C4941F736E6900FD9EE0 /* UIBarButtonItem+Extension.h */,
-				04B8C4951F736E6900FD9EE0 /* UIBarButtonItem+Extension.m */,
+				04B8C4971F73922E00FD9EE0 /* UIColor+Ext.h */,
+				04B8C4981F73922E00FD9EE0 /* UIColor+Ext.m */,
+				04B8C4941F736E6900FD9EE0 /* UIBarButtonItem+Ext.h */,
+				04B8C4951F736E6900FD9EE0 /* UIBarButtonItem+Ext.m */,
+				0440BE831FA9D614009C5C02 /* UINavigationBar+Ext.h */,
+				0440BE841FA9D614009C5C02 /* UINavigationBar+Ext.m */,
+				0440BE861FA9D782009C5C02 /* UIWindow+Ext.h */,
+				0440BE871FA9D782009C5C02 /* UIWindow+Ext.m */,
 				04B8C4BC1F73BC0700FD9EE0 /* UIButton+Ext.h */,
 				04B8C4BD1F73BC0700FD9EE0 /* UIButton+Ext.m */,
 				C51F64341FA9B3190080E4D3 /* UIImage+WWAdd.h */,
 				C51F64351FA9B3190080E4D3 /* UIImage+WWAdd.m */,
+				C51F643D1FA9BAFF0080E4D3 /* UILabel+WWAdd.h */,
+				C51F643E1FA9BAFF0080E4D3 /* UILabel+WWAdd.m */,
 				04B8C4AA1F73B67F00FD9EE0 /* NSDate+Utilities.h */,
 				04B8C4AB1F73B67F00FD9EE0 /* NSDate+Utilities.m */,
 				04B8C4B61F73BB3F00FD9EE0 /* NSString+JSON.h */,
@@ -406,14 +425,6 @@
 				04B8C4BA1F73BBAE00FD9EE0 /* NSURL+Additions.m */,
 				04B8C4AD1F73B9BD00FD9EE0 /* NSDictionary+UrlEncoding.h */,
 				04B8C4AE1F73B9BD00FD9EE0 /* NSDictionary+UrlEncoding.m */,
-				04B8C4941F736E6900FD9EE0 /* UIBarButtonItem+Extension.h */,
-				04B8C4951F736E6900FD9EE0 /* UIBarButtonItem+Extension.m */,
-				04B8C4BC1F73BC0700FD9EE0 /* UIButton+Ext.h */,
-				04B8C4BD1F73BC0700FD9EE0 /* UIButton+Ext.m */,
-				C51F64341FA9B3190080E4D3 /* UIImage+WWAdd.h */,
-				C51F64351FA9B3190080E4D3 /* UIImage+WWAdd.m */,
-				C51F643D1FA9BAFF0080E4D3 /* UILabel+WWAdd.h */,
-				C51F643E1FA9BAFF0080E4D3 /* UILabel+WWAdd.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -423,8 +434,6 @@
 			children = (
 				0440BE6D1FA9A9D5009C5C02 /* QRCodeView.h */,
 				0440BE6C1FA9A9D5009C5C02 /* QRCodeView.m */,
-				C51F643A1FA9BA990080E4D3 /* WWTabBarItem.h */,
-				C51F643B1FA9BA990080E4D3 /* WWTabBarItem.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -763,7 +772,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEAAAAA61F735EC500A461F6 /* main.m in Sources */,
-				04B8C4991F73922E00FD9EE0 /* UIColor+Hexadecimal.m in Sources */,
+				0440BE821FA9D14E009C5C02 /* UIFont+WWTTF.m in Sources */,
+				04B8C4991F73922E00FD9EE0 /* UIColor+Ext.m in Sources */,
 				04B8C4AF1F73B9BD00FD9EE0 /* NSDictionary+UrlEncoding.m in Sources */,
 				DEAAAAA31F735E9F00A461F6 /* AppDelegate.m in Sources */,
 				04B8C4BB1F73BBAE00FD9EE0 /* NSURL+Additions.m in Sources */,
@@ -773,14 +783,16 @@
 				04B8C4A21F73A54500FD9EE0 /* WWBaseTableViewCell.m in Sources */,
 				04B8C49F1F7396ED00FD9EE0 /* UIView+Ext.m in Sources */,
 				04C616B21FA99E0300F8E33B /* MBProgressHUD+WW.m in Sources */,
+				0440BE851FA9D614009C5C02 /* UINavigationBar+Ext.m in Sources */,
 				C51F642F1FA9641E0080E4D3 /* WWBaseViewController.m in Sources */,
 				0440BE7F1FA9BC2C009C5C02 /* WWLoginViewController.m in Sources */,
 				C51F643C1FA9BA990080E4D3 /* WWTabBarItem.m in Sources */,
 				DEAAAAA51F735E9F00A461F6 /* WWHomeViewController.m in Sources */,
+				0440BE881FA9D782009C5C02 /* UIWindow+Ext.m in Sources */,
 				04B8C4BE1F73BC0700FD9EE0 /* UIButton+Ext.m in Sources */,
 				04C616B61FA9A00800F8E33B /* WWFPSLabel.m in Sources */,
 				0440BE7A1FA9B0FF009C5C02 /* UIDevice+YYAdd.m in Sources */,
-				04B8C4961F736E6900FD9EE0 /* UIBarButtonItem+Extension.m in Sources */,
+				04B8C4961F736E6900FD9EE0 /* UIBarButtonItem+Ext.m in Sources */,
 				C51F64421FA9C02B0080E4D3 /* WWTabBarViewController.m in Sources */,
 				C51F643F1FA9BAFF0080E4D3 /* UILabel+WWAdd.m in Sources */,
 				04B8C4A61F73A68700FD9EE0 /* WWHomeCell.m in Sources */,
