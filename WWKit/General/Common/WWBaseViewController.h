@@ -61,7 +61,7 @@
  @param action 点击方法
  @param tags tags数组 回调区分用
  */
-- (void)addNavigationItemWithTitles:(NSArray *)titles isLeft:(BOOL)isLeft target:(id)target action:(SEL)action tags:(NSArray *)tags;
+- (NSMutableArray<UIButton *> *)addNavigationItemWithTitles:(NSArray *)titles isLeft:(BOOL)isLeft target:(id)target action:(SEL)action tags:(NSArray *)tags;
 
 /**
  导航栏添加图标按钮
