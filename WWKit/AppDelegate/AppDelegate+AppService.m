@@ -8,6 +8,7 @@
 
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "AppDelegate+AppService.h"
+#import "WWLoginViewController.h"
 #import "OpenUDID.h"
 
 @implementation AppDelegate (AppService)
@@ -110,7 +111,7 @@
     }else {//登陆失败加载登陆页面控制器
         
         self.mainTabBar = nil;
-        UINavigationController *loginNavi =[[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
+        WWBaseNavigationViewController *loginNavi =[[WWBaseNavigationViewController alloc] initWithRootViewController:[WWLoginViewController new]];
         
         CATransition *anima = [CATransition animation];
         anima.type = @"fade";//设置动画的类型

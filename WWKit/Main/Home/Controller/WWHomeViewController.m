@@ -38,7 +38,7 @@
 - (UITableView *)tableView {
     if (_tableView == nil) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height) style:UITableViewStylePlain];
-        _tableView.backgroundColor = [UIColor colorWithHex:@"#f3f3f3"];
+        _tableView.backgroundColor = UIColorHex(@"#f3f3f3");
         _tableView.showsHorizontalScrollIndicator = NO;
         _tableView.delegate = self;
         _tableView.dataSource = self;

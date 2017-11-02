@@ -18,6 +18,11 @@
     return (__bridge_transfer NSString *)string;
 }
 
+- (NSString *)stringByTrim {
+    NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    return [self stringByTrimmingCharactersInSet:set];
+}
+
 - (NSURL *)URLByAppendingQueryString:(NSString *)queryString {
     if (![queryString length]) {
         return [NSURL URLWithString:self];
