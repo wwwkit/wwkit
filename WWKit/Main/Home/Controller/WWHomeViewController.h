@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WWHomeViewController : UIViewController
+@interface WWHomeViewController : WWBaseViewController
 
 
 @end

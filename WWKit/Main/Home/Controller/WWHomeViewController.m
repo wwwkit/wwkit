@@ -39,6 +39,7 @@
                            }
                            self.dataSource = result;
                            [self.tableView reloadData];
+                           [self showNoDataImage];
                        }];
 }
 

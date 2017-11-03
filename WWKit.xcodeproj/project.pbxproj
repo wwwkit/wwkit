@@ -15,6 +15,7 @@
 		043AF7DA1FAB04F80077D587 /* WEDodgeKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AF7D51FAB04370077D587 /* WEDodgeKeyboard.m */; };
 		043AF7DD1FAB21C10077D587 /* WWRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AF7DC1FAB21C10077D587 /* WWRegisterViewController.m */; };
 		043AF7E01FAB3DD70077D587 /* WWCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AF7DF1FAB3DD70077D587 /* WWCountDownButton.m */; };
+		043AF7E31FAC188D0077D587 /* WWForgotPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AF7E21FAC188D0077D587 /* WWForgotPwdViewController.m */; };
 		0440BE6A1FA9A85D009C5C02 /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440BE691FA9A85D009C5C02 /* AppDelegate+AppService.m */; };
 		0440BE7A1FA9B0FF009C5C02 /* UIDevice+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440BE791FA9B0FE009C5C02 /* UIDevice+YYAdd.m */; };
 		0440BE7F1FA9BC2C009C5C02 /* WWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440BE7E1FA9BC2C009C5C02 /* WWLoginViewController.m */; };
@@ -97,6 +98,8 @@
 		043AF7DC1FAB21C10077D587 /* WWRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWRegisterViewController.m; sourceTree = "<group>"; };
 		043AF7DE1FAB3DD70077D587 /* WWCountDownButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWCountDownButton.h; sourceTree = "<group>"; };
 		043AF7DF1FAB3DD70077D587 /* WWCountDownButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWCountDownButton.m; sourceTree = "<group>"; };
+		043AF7E11FAC188D0077D587 /* WWForgotPwdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWForgotPwdViewController.h; sourceTree = "<group>"; };
+		043AF7E21FAC188D0077D587 /* WWForgotPwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWForgotPwdViewController.m; sourceTree = "<group>"; };
 		0440BE681FA9A85D009C5C02 /* AppDelegate+AppService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AppService.h"; sourceTree = "<group>"; };
 		0440BE691FA9A85D009C5C02 /* AppDelegate+AppService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AppService.m"; sourceTree = "<group>"; };
 		0440BE6B1FA9A8B6009C5C02 /* CommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
@@ -276,6 +279,8 @@
 				0440BE7E1FA9BC2C009C5C02 /* WWLoginViewController.m */,
 				043AF7DB1FAB21C10077D587 /* WWRegisterViewController.h */,
 				043AF7DC1FAB21C10077D587 /* WWRegisterViewController.m */,
+				043AF7E11FAC188D0077D587 /* WWForgotPwdViewController.h */,
+				043AF7E21FAC188D0077D587 /* WWForgotPwdViewController.m */,
 			);
 			path = Contronller;
 			sourceTree = "<group>";
@@ -933,6 +938,7 @@
 				043AF7CA1FAAF1CC0077D587 /* UITextField+Ext.m in Sources */,
 				04B8C49F1F7396ED00FD9EE0 /* UIView+Ext.m in Sources */,
 				C59D5F301FAB7A2A00D32D52 /* WWBaseDataRequest.m in Sources */,
+				043AF7E31FAC188D0077D587 /* WWForgotPwdViewController.m in Sources */,
 				04C616B21FA99E0300F8E33B /* MBProgressHUD+WW.m in Sources */,
 				0440BE851FA9D614009C5C02 /* UINavigationBar+Ext.m in Sources */,
 				C51F642F1FA9641E0080E4D3 /* WWBaseViewController.m in Sources */,

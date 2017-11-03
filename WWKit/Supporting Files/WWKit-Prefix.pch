@@ -19,6 +19,7 @@
 //基础类
 #import "AppDelegate.h"
 #import "AppDelegate+AppService.h"
+#import "WWBaseViewController.h"
 #import "WWBaseNavigationViewController.h"
 
 #import "FontAndColorMacro.h" // 主题风格
