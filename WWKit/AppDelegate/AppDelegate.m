@@ -22,6 +22,7 @@
     [self initLocalizable];
     [self initWindow];
     [self initService];
+    [self initUserManager];
     return YES;
 }
 

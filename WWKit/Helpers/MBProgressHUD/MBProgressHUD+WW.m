@@ -33,6 +33,23 @@ const NSInteger hideTime = 2;
     //    hud.backgroundView.color = [UIColor colorWithWhite:0.f alpha:0.1f];
     return hud;
 }
+
++ (void)showHint:(NSString *)hint {
+    if ([hint isEqualToString:@""] || hint == nil) {
+        return;
+    }
+    //显示提示信息
+    UIView *view = [[UIApplication sharedApplication].delegate window];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    hud.userInteractionEnabled = NO;
+    // Configure for text only and offset down
+    hud.mode = MBProgressHUDModeText;
+    hud.label.text = hint;
+    hud.margin = 10.f;
+    hud.offset = CGPointMake(hud.offset.x, 180);
+    hud.removeFromSuperViewOnHide = YES;
+    [hud hideAnimated:YES afterDelay:2];
+}
 #pragma mark-------------------- show Tip----------------------------
 
 + (void)showTipMessageInWindow:(NSString*)message

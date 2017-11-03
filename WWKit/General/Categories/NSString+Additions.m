@@ -105,9 +105,22 @@
 
 - (BOOL)isMobile
 {
-    NSString *mobileRegex = @"^(13[0-9]|15[0-9]|18[0-9]|14[0-9]|17[0-9])[0-9]{8}$";
-    NSPredicate *regexTestMobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", mobileRegex];
+    NSString *MOBILE = @"^1(3[0-9]|4[57]|5[0-35-9]|8[0-9]|7[0678])\\d{8}$";
+    NSPredicate *regexTestMobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
     return [regexTestMobile evaluateWithObject:self];
+}
+
+- (BOOL)isPwd
+{
+    /*
+     不能全部为数字
+     不能全部为字母
+     必须包含字母和数字
+     6-20位
+     */
+    NSString *pwdRegex = @"^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$";
+    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pwdRegex];
+    return [regextestmobile evaluateWithObject:self];
 }
 
 + (NSString *)flattenHTML:(NSString *)html trimWhiteSpace:(BOOL)trim

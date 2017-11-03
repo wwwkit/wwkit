@@ -13,6 +13,9 @@
 /**
  MBProgressHUD 的二次封装
  */
+
++ (void)showHint:(NSString *)hint;
+
 + (void)showTipMessageInWindow:(NSString*)message;
 + (void)showTipMessageInView:(NSString*)message;
 + (void)showTipMessageInWindow:(NSString*)message timer:(float)aTimer;

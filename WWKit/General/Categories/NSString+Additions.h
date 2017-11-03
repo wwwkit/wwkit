@@ -42,6 +42,8 @@
 - (BOOL)isPureFloat;
 /** 判断是否是手机号 */
 - (BOOL)isMobile;
+/** 判断密码格式 */
+- (BOOL)isPwd;
 /** 却掉html标签*/
 + (NSString *)flattenHTML:(NSString *)html trimWhiteSpace:(BOOL)trim;
 /** MD5加密*/

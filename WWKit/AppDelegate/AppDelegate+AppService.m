@@ -61,6 +61,12 @@
 
 #pragma mark ————— 初始化用户系统 —————
 -(void)initUserManager{
+    
+    WWLoginViewController *loginVC = [[WWLoginViewController alloc] init];
+    loginVC.isHidenNaviBar = YES;
+    WWBaseNavigationViewController *loginNavi = [[WWBaseNavigationViewController alloc] initWithRootViewController:loginVC];
+    self.window.rootViewController = loginNavi;
+    
 //    DLog(@"设备IMEI ：%@",[OpenUDID value]);
 //    if([userManager loadUserInfo]){
 //

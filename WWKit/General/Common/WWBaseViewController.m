@@ -9,7 +9,7 @@
 #import "WWBaseViewController.h"
 #import <MJRefresh.h>
 
-@interface WWBaseViewController ()
+@interface WWBaseViewController ()<UINavigationControllerDelegate>
 
 @property (nonatomic,strong) UIImageView* noDataView;
 
@@ -302,6 +302,10 @@
 {
     // 默认进去类型
     return   UIInterfaceOrientationPortrait;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning {

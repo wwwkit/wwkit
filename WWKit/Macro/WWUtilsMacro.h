@@ -36,8 +36,11 @@
 #define KScreenHeight [[UIScreen mainScreen] bounds].size.height
 #define kScreen_Bounds [UIScreen mainScreen].bounds
 
-#define Iphone6ScaleWidth KScreenWidth/375.0
-#define Iphone6ScaleHeight KScreenHeight/667.0
+// 屏宽与设计图比例
+#define kScale [UIScreen mainScreen].bounds.size.width/375.0
+
+//#define Iphone6ScaleWidth KScreenWidth/375.0
+//#define Iphone6ScaleHeight KScreenHeight/667.0
 //根据ip6的屏幕来拉伸
 #define kRealValue(with) ((with)*(KScreenWidth/375.0f))
 
@@ -57,6 +60,11 @@
 
 #pragma mark - 快捷类
 ////////////////////////////////////////////////////////////////////////////////////////////////
+//定义UIImage对象
+#define ImageWithFile(_pointer) [UIImage imageWithContentsOfFile:([[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@@%dx", _pointer, (int)[UIScreen mainScreen].nativeScale] ofType:@"png"])]
+#define IMAGE_NAMED(name) [UIImage imageNamed:name]
+#define kUIFontToSize(_s_) [UIFont systemFontOfSize:_s_]
+
 //拼接字符串
 #define NSStringFormat(format,...) [NSString stringWithFormat:format,##__VA_ARGS__]
 #define kRandomColor    KRGBColor(arc4random_uniform(256)/255.0,arc4random_uniform(256)/255.0,arc4random_uniform(256)/255.0)        //随机色生成
@@ -66,8 +74,9 @@
 #define UIFontOfSize(s) [UIFont systemFontOfSize:s]
 #define NSStringFromInt(intValue) [NSString stringWithFormat:@"%d", intValue]
 #define NSStringFromFloat(floatValue) [NSString stringWithFormat:@"%f", floatValue]
-#define IsKindOfClass(_x, _class) ([_x isKindOfClass:[_class class]])
 #define RespondsToSelector(_c, _m) ([_c respondsToSelector:_m])
+
+#define IsKindOfClass(_x, _class) ([_x isKindOfClass:[_class class]])
 #define ISEMPTY(_v) (_v == nil || _v.length == 0)
 #define ISNull(_x)   ([_x isKindOfClass:[NSNull class]] || _x == nil)
 #define HAVECONTROLLER(value) if(value == nil || value.controller == nil){return;}
