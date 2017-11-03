@@ -10,4 +10,12 @@
 
 @implementation WWBaseResponse
 
+- (NSDictionary *)mappingTable{
+    return @{
+             @"code":@"errno"
+             ,@"msg":@"errmsg"
+             ,@"result":@"rst"
+             };
+}
+
 @end

@@ -24,7 +24,7 @@ typedef enum : NSUInteger{
 + (id)requestWithParameters:(NSDictionary*)params
           withIndicatorView:(UIView*)indiView
                   withClass:(Class)objectClass
-          onRequestFinished:(void(^)(WWBaseDataRequest *request, WWBaseResponse *result))onFinishedBlock;
+          onRequestFinished:(void(^)(WWBaseDataRequest *request, id result))onFinishedBlock;
 
 
 - (WWRequestMethod)getRequestMethod;                       //default method is POST

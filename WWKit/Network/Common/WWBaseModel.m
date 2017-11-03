@@ -11,9 +11,7 @@
 @implementation WWBaseModel
 
 - (NSDictionary *)mappingTable {
-    return @{
-             @"userName":@"uNam"
-             };
+    return nil;
 }
 
 @end

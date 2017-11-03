@@ -10,9 +10,10 @@
 
 @interface WWBaseModel : NSObject
 
-@property (nonatomic, copy)NSString * userName;
-@property (nonatomic, copy)NSString * password;
-
+/**
+ 映射关系表
+ key为属性名，value为服务器字段
+ */
 - (NSDictionary *)mappingTable;
 
 @end

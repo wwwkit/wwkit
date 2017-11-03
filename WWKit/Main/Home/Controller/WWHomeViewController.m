@@ -8,13 +8,13 @@
 
 #import "WWHomeViewController.h"
 #import "WWHomeCell.h"
-#import "WWBaseDataRequest.h"
-#import "WWHomeModel.h"
+#import "WWDemoModel.h"
+#import "WWDemoRequest.h"
 
 @interface WWHomeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, copy) NSArray *dataSource;
+@property (nonatomic, strong) NSMutableArray *dataSource;
 
 @end
 
@@ -25,14 +25,21 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:self.tableView];
-    
-    [WWBaseDataRequest requestWithParameters:@{}
-                           withIndicatorView:self.view
-                                   withClass:[WWHomeModel class]
-                           onRequestFinished:^(WWBaseDataRequest *request, WWBaseResponse *result) {
-                               
-                           }];
 
+    [WWDemoRequest requestWithParameters:@{
+                                           @"keyid":@"3719"
+                                           ,@"mtime":@"1481956863"
+                                           }
+                       withIndicatorView:self.view
+                               withClass:[WWDemoModel class]
+                       onRequestFinished:^(WWBaseDataRequest *request, id result) {
+                           DLog(@"%ld+++%@\n",(long)request.response.code,request.response.msg);
+                           for (WWDemoModel *model in result) {
+                               DLog(@"%@---%@---%@",model.mmm,model.url,model.sort);
+                           }
+                           self.dataSource = result;
+                           [self.tableView reloadData];
+                       }];
 }
 
 - (UITableView *)tableView {
@@ -46,9 +53,10 @@
     return _tableView;
 }
 
-- (NSArray *)dataSource {
+- (NSMutableArray *)dataSource {
     if (!_dataSource) {
-        _dataSource = @[@"ceshi1",@"ceshi2",@"ceshi3",@"ceshi4",@"ceshi5",@"ceshi6"];
+        _dataSource = [NSMutableArray array];
+//        _dataSource = @[@"ceshi1",@"ceshi2",@"ceshi3",@"ceshi4",@"ceshi5",@"ceshi6"];
     }
     return _dataSource;
 }
@@ -79,7 +87,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     WWHomeCell *cell = [WWHomeCell cellWithTableView:tableView atIndexPath:indexPath];
-    cell.textLabel.text = self.dataSource[indexPath.row];
+//    cell.textLabel.text = self.dataSource[indexPath.row];
+    WWDemoModel *model = self.dataSource[indexPath.row];
+    cell.textLabel.text = model.mmm;
     return cell;
 }
 

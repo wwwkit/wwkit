@@ -16,7 +16,7 @@
 + (id)requestWithParameters:(NSDictionary*)params
                 withIndicatorView:(UIView*)indiView
                        withClass:(Class)objectClass
-            onRequestFinished:(void(^)(WWBaseDataRequest *request, WWBaseResponse *result))onFinishedBlock {
+            onRequestFinished:(void(^)(WWBaseDataRequest *request, id result))onFinishedBlock {
     
     return [[self alloc] initWithParameters:params
                              withRequestUrl:nil
@@ -39,46 +39,80 @@
     }
     NSAssert(_requestUrl != nil || [_requestUrl length] > 0, @"invalid request url");
     if (![_requestUrl hasPrefix:@"http"]) { // 低层网址拼接
-//        _requestUrl = [BASERequest stringByAppendingString:_requestUrl];
+        _requestUrl = [BASERequest stringByAppendingString:_requestUrl];
     }
     
     [WWRequest POST:_requestUrl
          parameters:params
             success:^(NSURLSessionDataTask * _Nullable task, id _Nullable responseObject) {
-                for (NSString *name in [self getProperties:[_response class]]) {
-                    if (responseObject[name]) {
-                        [_response setValue:responseObject[name] forKey:name];
-                    }
-                }
-                
-                NSArray *modelPropertiesArray = [self getProperties:objectClass];
-                
-                if ([responseObject isKindOfClass:[NSArray class]]) {
-                    NSMutableArray *resultArray = [NSMutableArray array];
+                if ([responseObject isKindOfClass:[NSDictionary class]]) {
                     
-                    for (id obj in responseObject) {
-                        if ([obj isKindOfClass:[NSDictionary class]]) {
-                            
-                            id model = [[objectClass alloc] init];
-                            
-                            for (NSString *name in modelPropertiesArray) {
-                                if (obj[name]) {
-                                    [model setValue:obj[name] forKey:name];
-                                }
+                    NSArray *responsePropertiesArray = [self getProperties:[WWBaseResponse class]];
+                    _response = [[WWBaseResponse alloc]init];
+                    for (NSString *name in responsePropertiesArray) {
+                        if ([_response mappingTable][name]) {
+                            if (responseObject[[_response mappingTable][name]]) {
+                                [_response setValue:responseObject[[_response mappingTable][name]] forKey:name];
                             }
-                            [resultArray addObject:model];
+                        }else{
+                            if (responseObject[name]) {
+                                [_response setValue:responseObject[name] forKey:name];
+                            }
                         }
                     }
                     
-                    if (onFinishedBlock) {
-                        onFinishedBlock(self,resultArray);
+                    if (_response.result) {
+                        
+                        NSArray *modelPropertiesArray = [self getProperties:objectClass];
+                        
+                        if ([_response.result isKindOfClass:[NSArray class]]) { // 数据内是数组情况
+                            NSMutableArray *resultArray = [NSMutableArray array];
+                            
+                            for (id obj in _response.result) {
+                                if ([obj isKindOfClass:[NSDictionary class]]) { // 数组内字典
+                                    id model = [[objectClass alloc] init];
+                                    
+                                    for (NSString *name in modelPropertiesArray) {
+                                        if ([model isKindOfClass:[WWBaseModel class]]) {
+                                            if ([model mappingTable][name]) {
+                                                if (obj[[model mappingTable][name]]) {
+                                                    [model setValue:obj[[model mappingTable][name]] forKey:name];
+                                                }
+                                            }else{
+                                                if (obj[name]) {
+                                                    [model setValue:obj[name] forKey:name];
+                                                }
+                                            }
+                                        }
+                                    }
+                                    [resultArray addObject:model];
+                                }
+                            }
+                            
+                            if (onFinishedBlock) {
+                                onFinishedBlock(self,resultArray);
+                            }
+                        }else if ([_response.result isKindOfClass:[NSDictionary class]]) { // 数据是单字典的
+                            id model = [[objectClass alloc] init];
+                            
+                            for (NSString *name in modelPropertiesArray) {
+                                if (_response.result[name]) {
+                                    [model setValue:_response.result[name] forKey:name];
+                                }
+                            }
+                            if (onFinishedBlock) {
+                                onFinishedBlock(self,model);
+                            }
+                        }
+                    }else{
+                        DLog(@"无内容数据");
                     }
-                }else if ([responseObject isKindOfClass:[NSDictionary class]]) {
-                    
+                }else{
+                    NSAssert(false, @"不识别类型");
                 }
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nullable error) {
-                
+                DLog(@"");
             }];
     return nil;
 }

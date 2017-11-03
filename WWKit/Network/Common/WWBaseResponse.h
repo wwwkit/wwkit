@@ -6,12 +6,12 @@
 //  Copyright © 2017年 wwkit. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "WWBaseModel.h"
 
-@interface WWBaseResponse : NSObject
+@interface WWBaseResponse : WWBaseModel
 
-@property (nonatomic, assign) int code;
+@property (nonatomic, assign) NSInteger code;
 @property (nonatomic, copy) NSString *msg;
-@property (nonatomic, copy) id request;
+@property (nonatomic, copy) id result;
 
 @end
