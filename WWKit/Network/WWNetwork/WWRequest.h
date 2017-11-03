@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-NSString * const BASERequest = @"https://api.meixian360.cn/";
+static NSString *const BASERequest = @"https://api.meixian360.cn/";
 
 typedef NS_ENUM(NSInteger, WWRequestMode) {
     WWRequestGET = 0,

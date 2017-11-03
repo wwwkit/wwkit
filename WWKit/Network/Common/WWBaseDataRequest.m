@@ -39,7 +39,7 @@
     }
     NSAssert(_requestUrl != nil || [_requestUrl length] > 0, @"invalid request url");
     if (![_requestUrl hasPrefix:@"http"]) { // 低层网址拼接
-        _requestUrl = [BASERequest stringByAppendingString:_requestUrl];
+//        _requestUrl = [BASERequest stringByAppendingString:_requestUrl];
     }
     
     [WWRequest POST:_requestUrl
@@ -47,9 +47,36 @@
             success:^(NSURLSessionDataTask * _Nullable task, id _Nullable responseObject) {
                 for (NSString *name in [self getProperties:[_response class]]) {
                     if (responseObject[name]) {
-                        
+                        [_response setValue:responseObject[name] forKey:name];
                     }
                 }
+                
+                NSArray *modelPropertiesArray = [self getProperties:objectClass];
+                
+                if ([responseObject isKindOfClass:[NSArray class]]) {
+                    NSMutableArray *resultArray = [NSMutableArray array];
+                    
+                    for (id obj in responseObject) {
+                        if ([obj isKindOfClass:[NSDictionary class]]) {
+                            
+                            id model = [[objectClass alloc] init];
+                            
+                            for (NSString *name in modelPropertiesArray) {
+                                if (obj[name]) {
+                                    [model setValue:obj[name] forKey:name];
+                                }
+                            }
+                            [resultArray addObject:model];
+                        }
+                    }
+                    
+                    if (onFinishedBlock) {
+                        onFinishedBlock(self,resultArray);
+                    }
+                }else if ([responseObject isKindOfClass:[NSDictionary class]]) {
+                    
+                }
+                
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nullable error) {
                 
             }];
@@ -68,7 +95,7 @@
 }
 
 //返回当前类的所有属性
-- (instancetype)getProperties:(Class)objectClass{
+- (NSArray *)getProperties:(Class)objectClass{
     
     // 获取当前类的所有属性
     unsigned int count;// 记录属性个数
@@ -88,7 +115,7 @@
         [mArray addObject:name];
     }
     
-    return mArray.copy;
+    return mArray;
 }
 
 @end
